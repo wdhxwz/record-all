@@ -1,4 +1,4 @@
-package com.krista;
+package com.krista.java8.test;
 
 /**
  * Hello world!
