@@ -23,12 +23,12 @@
             <div id="errorBox">
                 <div id="errorText">
                     <h1>Sorry...发生错误！</h1>
-                    <p th:text="${status + '-' + error}"/>
+                    <p th:text="${status + '-' + message}"/>
 
                     <p>
                         火星不太安全，我可以免费送你回地球
                     </p>
-                    <p th:text="${trace}" style="visibility: hidden"></p>
+                    <p th:text="${exception + '-' + error}" style="visibility: hidden"></p>
                 </div>
                 <a href="http://www.cssmoban.com/" title="返回首页">
                     <div class="link" id="home"></div>
