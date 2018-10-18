@@ -6,9 +6,10 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * @Auther: dw_wanghonghong
+ * App
+ *
+ * @Author: dw_wanghonghong
  * @Date: 2018/10/15 20:10
- * @Description:
  */
 public class App {
     public static void main(String[] args) {
@@ -22,12 +23,14 @@ public class App {
                 }
         );
 
-        // lambda
+        // lambda:在有函数式接口的场景下使用
         list.forEach(
                 element -> System.out.println(element)
         );
 
         // 方法引用
+        // 使用lambda表达式来创建匿名方法;
+        // 但是有时,lambda表达式只会调用一次现有方法（而不做其他事）,在这些情况下，通过名称引用现有方法通常更清楚;
         list.forEach(
                 System.out::println
         );

@@ -11,6 +11,7 @@
         <module>springboot-1.x-test</module>
         <module>springframework-4.x-aop-test</module>
         <module>springframework-4.x-ioc-test</module>
+        <module>java-test</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @Auther: dw_wanghonghong
+ * @Author: dw_wanghonghong
  * @Date: 2018/10/15 14:28
  * @Description:
  */
@@ -15,6 +15,6 @@ public class HomeController {
     @RequestMapping(value = "/")
     @ResponseBody
     public String index(){
-        return "Hello Spring Boot 5566";
+        return "Hello Spring Boot 5566 222";
     }
 }
