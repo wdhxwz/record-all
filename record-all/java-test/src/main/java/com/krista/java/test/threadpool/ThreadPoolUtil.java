@@ -45,7 +45,7 @@ public class ThreadPoolUtil {
      * 获取固定线程数的线程池
      *
      * @param threadNameFormat 线程名称
-     * @param threads 线程数
+     * @param threads          线程数
      * @author dw_wangdonghong
      * @date 2018/10/18 17:53
      */
@@ -56,12 +56,12 @@ public class ThreadPoolUtil {
 
     /**
      * 获取单线程数据的线程池
-     * 
-     * @author  dw_wangdonghong
-     * @date  2018/10/18 17:55
+     *
      * @param threadNameFormat 线程名称
+     * @author dw_wangdonghong
+     * @date 2018/10/18 17:55
      */
-    public static ExecutorService newSingleThreadExecutor(String threadNameFormat){
+    public static ExecutorService newSingleThreadExecutor(String threadNameFormat) {
         return newFixedThreadPool(threadNameFormat, 1);
     }
 }
