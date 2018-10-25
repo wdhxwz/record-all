@@ -13,6 +13,7 @@ import java.util.concurrent.*;
 public class ThreadPoolUtil {
     private static RejectedExecutionHandler defaultHandler =
             new ThreadPoolExecutor.AbortPolicy();
+    private static Integer defaultWorkQueueCapacity = 4196;
 
     /**
      * 获取线程池对象
@@ -46,12 +47,13 @@ public class ThreadPoolUtil {
      *
      * @param threadNameFormat 线程名称
      * @param threads          线程数
+     * @param workQueueCapacity 工作队列长度
      * @author dw_wangdonghong
      * @date 2018/10/18 17:53
      */
-    public static ExecutorService newFixedThreadPool(String threadNameFormat, int threads) {
+    public static ExecutorService newFixedThreadPool(String threadNameFormat, int threads, Integer workQueueCapacity) {
         return threadPool(threadNameFormat, threads, threads, 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>(), defaultHandler);
+                new LinkedBlockingQueue<Runnable>(8192), defaultHandler);
     }
 
     /**
@@ -62,6 +64,6 @@ public class ThreadPoolUtil {
      * @date 2018/10/18 17:55
      */
     public static ExecutorService newSingleThreadExecutor(String threadNameFormat) {
-        return newFixedThreadPool(threadNameFormat, 1);
+        return newFixedThreadPool(threadNameFormat, 1, defaultWorkQueueCapacity);
     }
 }

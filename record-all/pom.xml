@@ -12,6 +12,7 @@
         <module>springframework-4.x-aop-test</module>
         <module>springframework-4.x-ioc-test</module>
         <module>java-test</module>
+        <module>microservice-simple-movie</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -19,7 +20,31 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
+        <spring.cloud.version>Brixton.RELEASE</spring.cloud.version>
+        <springboot.version>1.5.16.RELEASE</springboot.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring boot 相关依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- spring cloud 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>

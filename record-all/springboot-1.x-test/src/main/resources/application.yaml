@@ -1,0 +1,58 @@
+debug: false
+eureka:
+  client:
+    health-check:
+      enabled: true
+    service-url:
+      defaultZone: http://krista.service.registry.B:18765/eureka/
+  instance:
+    prefer-ip-address: true
+
+# 关闭默认favicon
+# spring.mvc.favicon.enabled=true
+server:
+  port: 8000
+
+security:
+  basic:
+    enabled: false
+  user:
+    name: krista
+    password: krista008
+management:
+  security:
+    enabled: true
+    role: ADMIN
+
+# 开启/shutdown,默认false
+endpoints:
+  shutdown:
+    enabled: false
+
+# 定义系统的info信息
+info:
+  applicationName:  springboot-1.x-test
+  author:
+    name: krista
+    email: 1366678737@qq.com
+
+# database
+spring:
+  application:
+    name: user-service
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate.ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+
+logging:
+  level:
+    root: info
+    org:
+      hibernate: info
+      hibernate.type.descriptor.sql.BasicBinder: trace
+      hibernate.type.descriptor.sql.BasicExtractor: trace
