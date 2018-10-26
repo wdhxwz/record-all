@@ -20,7 +20,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <spring.cloud.version>Brixton.RELEASE</spring.cloud.version>
+        <spring.cloud.version>Dalston.SR5</spring.cloud.version>
         <springboot.version>1.5.16.RELEASE</springboot.version>
     </properties>
 

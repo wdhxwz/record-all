@@ -1,0 +1,13 @@
+server:
+  port: 8010
+eureka:
+  client:
+    health-check:
+      enabled: true
+    service-url:
+      defaultZone: http://krista.service.registry.B:18765/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: movie-service
