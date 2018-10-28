@@ -3,10 +3,7 @@ package com.krista.springboot.v1x.test.controller;
 import com.krista.springboot.v1x.test.dao.UserRepository;
 import com.krista.springboot.v1x.test.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * UserController
@@ -25,5 +22,12 @@ public class UserController {
         User findOne = this.userRepository.findOne(id);
 
         return findOne;
+    }
+
+    @PostMapping(value = "add")
+    public Object addUser(@RequestBody User user){
+        user = this.userRepository.save(user);
+
+        return user.getId();
     }
 }

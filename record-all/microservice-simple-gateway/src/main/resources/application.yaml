@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 5555
+# 路由映射
+zuul:
+  routes:
+    user-service:
+      path: /user-api/**
+      # url: http://127.0.0.1:8000
+      serviceId: user-service
+    movie-service:
+      path: /movie-api/**
+      serviceId: movie-service
+# 注册中心
+eureka:
+  client:
+    health-check:
+      enabled: true
+    service-url:
+      defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/

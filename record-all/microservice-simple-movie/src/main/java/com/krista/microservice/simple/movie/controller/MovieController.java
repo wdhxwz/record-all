@@ -1,6 +1,7 @@
 package com.krista.microservice.simple.movie.controller;
 
 import com.krista.microservice.simple.movie.feign.UserServiceFeignClient;
+import com.krista.microservice.simple.movie.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Map;
@@ -26,21 +26,18 @@ import java.util.Map;
 @RequestMapping("movie")
 public class MovieController {
     private static Logger logger = LoggerFactory.getLogger(MovieController.class);
-
-    @Autowired
-    private RestTemplate restTemplate;
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
     private LoadBalancerClient loadBalancerClient;
     @Autowired
     private UserServiceFeignClient userServiceFeignClient;
+    @Autowired
+    private UserService userService;
 
     @GetMapping(value = "/user/{id}")
     public Object getUser(@PathVariable Long id){
-        Map map = this.restTemplate.getForObject("http://user-service/user/" + id , Map.class);
-
-        return  map;
+        return  userService.getUser(id);
     }
 
     @GetMapping(value = "user-service")
