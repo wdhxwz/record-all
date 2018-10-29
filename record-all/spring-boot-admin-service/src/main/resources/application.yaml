@@ -1,0 +1,21 @@
+# 注册中心
+eureka:
+  client:
+    health-check:
+      enabled: true
+    service-url:
+      defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
+management:
+  security:
+    enabled: false
+server:
+  port: 8888
+spring:
+  application:
+    name: admin-service
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics , dump , jolokia, info , configprops , trace , logfile , refresh ,flyway , liquibase , heapdump ,loggers , auditevents , hystrix.stream
+logging:
+  file: "logs/boot-admin-service.log"

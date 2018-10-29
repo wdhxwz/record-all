@@ -14,6 +14,7 @@
         <module>java-test</module>
         <module>microservice-simple-movie</module>
         <module>microservice-simple-gateway</module>
+        <module>spring-boot-admin-service</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -21,8 +22,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <spring.cloud.version>Dalston.SR5</spring.cloud.version>
-        <springboot.version>1.5.16.RELEASE</springboot.version>
+        <spring.cloud.version>Edgware.SR1</spring.cloud.version>
+        <springboot.version>1.5.9.RELEASE</springboot.version>
     </properties>
 
     <dependencyManagement>
