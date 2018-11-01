@@ -1,8 +1,19 @@
 spring:
+  rabbitmq:
+    host: rabbitmq.krista.com
+    port: 5672
+    username: krista
+    password: krista008
+    virtual-host: zipkin
   application:
     name: api-gateway
+  zipkin:
+    base-url: http://127.0.0.1:9494
+  sleuth:
+    sampler:
+      percentage: 1.0
 server:
-  port: 5555
+  port: 8555
 # 路由映射
 zuul:
   routes:

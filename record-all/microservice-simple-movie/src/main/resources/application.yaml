@@ -9,5 +9,16 @@ eureka:
   instance:
     prefer-ip-address: true
 spring:
+  rabbitmq:
+    host: rabbitmq.krista.com
+    port: 5672
+    username: krista
+    password: krista008
+    virtual-host: zipkin
   application:
     name: movie-service
+  zipkin:
+    base-url: http://127.0.0.1:9494
+  sleuth:
+    sampler:
+      percentage: 1.0

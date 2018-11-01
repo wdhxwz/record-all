@@ -32,13 +32,23 @@ endpoints:
 
 # 定义系统的info信息
 info:
-  applicationName:  springboot-1.x-test
+  application:
+    name: springboot-1.x-test
+    desc: aaaa
+    version: V0.1
   author:
     name: krista
     email: 1366678737@qq.com
+    url: https://github.com/wdhxwz
 
 # database
 spring:
+  rabbitmq:
+    host: rabbitmq.krista.com
+    port: 5672
+    username: krista
+    password: krista008
+    virtual-host: zipkin
   application:
     name: user-service
   jpa:
@@ -49,6 +59,11 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
+  zipkin:
+    base-url: http://127.0.0.1:9494
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 logging:
   level:

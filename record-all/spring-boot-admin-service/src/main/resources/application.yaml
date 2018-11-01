@@ -1,5 +1,9 @@
 # 注册中心
 eureka:
+  instance:
+    metadata-map:
+      user.name: krista
+      user.password: krista008
   client:
     health-check:
       enabled: true
@@ -19,3 +23,7 @@ spring:
         endpoints: env,metrics , dump , jolokia, info , configprops , trace , logfile , refresh ,flyway , liquibase , heapdump ,loggers , auditevents , hystrix.stream
 logging:
   file: "logs/boot-admin-service.log"
+security:
+  user:
+    name: krista
+    password: krista008
