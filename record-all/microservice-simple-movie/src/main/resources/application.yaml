@@ -8,6 +8,7 @@ eureka:
       defaultZone: http://krista.service.registry.B:18765/eureka/
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 spring:
   rabbitmq:
     host: rabbitmq.krista.com

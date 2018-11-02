@@ -1,5 +1,8 @@
 package com.krista.springboot.v1x.test.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -9,17 +12,23 @@ import java.math.BigDecimal;
  * @author dw_wangdonghong
  * @date 2018/10/25 19:19
  */
+@ApiModel(value = "用户")
 @Entity
 public class User {
+    @ApiModelProperty(value = "用户id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @ApiModelProperty(value = "用户登录名")
     @Column
     private String username;
+    @ApiModelProperty(value = "用户姓名")
     @Column
     private String name;
+    @ApiModelProperty(value = "用户年龄")
     @Column
     private Integer age;
+    @ApiModelProperty(value = "账户余额")
     @Column
     private BigDecimal balance;
 

@@ -7,6 +7,8 @@ eureka:
       defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
   instance:
     prefer-ip-address: true
+    status-page-url-path: /swagger-ui.html
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     #instance-id: ${spring.application.name}:${server.port}
 
 # 关闭默认favicon

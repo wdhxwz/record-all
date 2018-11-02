@@ -3,6 +3,8 @@ package com.krista.springboot.v1x.test.controller;
 import com.krista.springboot.v1x.test.dao.UserRepository;
 import com.krista.springboot.v1x.test.model.User;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +24,10 @@ public class UserController {
 
     @ApiOperation(value = "根据用户id获取用户")
     @GetMapping("/{id}")
-    public User findById(@PathVariable Long id){
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "用户id", required = true, dataType = "Long", defaultValue = "1", paramType = "path")
+    })
+    public User findById(@PathVariable Long id) {
         User findOne = this.userRepository.findOne(id);
 
         return findOne;
@@ -30,7 +35,7 @@ public class UserController {
 
     @ApiOperation(value = "新增用户")
     @PostMapping(value = "add")
-    public Object addUser(@RequestBody User user){
+    public Object addUser(@RequestBody User user) {
         user = this.userRepository.save(user);
 
         return user.getId();

@@ -26,6 +26,8 @@ zuul:
       serviceId: movie-service
 # 注册中心
 eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     health-check:
       enabled: true

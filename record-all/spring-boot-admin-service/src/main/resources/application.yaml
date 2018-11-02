@@ -4,6 +4,7 @@ eureka:
     metadata-map:
       user.name: krista
       user.password: krista008
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     health-check:
       enabled: true
