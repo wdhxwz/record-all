@@ -2,17 +2,18 @@
 eureka:
   instance:
     metadata-map:
-      user.name: krista
-      user.password: krista008
+      user:
+        name: krista
+        password: krista008
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     health-check:
-      enabled: true
+      enabled: false
     service-url:
       defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
 management:
   security:
-    enabled: false
+    enabled: true
 server:
   port: 8888
 spring:
@@ -28,3 +29,9 @@ security:
   user:
     name: krista
     password: krista008
+# 为了避免Zuul请求路由到别的系统泄露一些重要信息，在请求头中默认没有这三个属性。
+# 而SpringSecurity是通过请求中的请求头Authentiction来取账号密码，
+# 所以每次提交账号密码验证的时候都获取不到
+# 解决办法是修改zuul配置 zuul.sensitive-headers= 覆盖zuul的默认配置即可。
+zuul:
+  sensitive-headers:

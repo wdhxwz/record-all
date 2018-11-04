@@ -2,10 +2,14 @@ debug: false
 eureka:
   client:
     health-check:
-      enabled: true
+      enabled: false
     service-url:
       defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
   instance:
+    metadata-map:
+      user:
+        name: krista
+        password: krista008
     prefer-ip-address: true
     status-page-url-path: /swagger-ui.html
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
@@ -24,8 +28,14 @@ security:
     password: krista008
 management:
   security:
-    enabled: true
-    role: ADMIN
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 # 开启/shutdown,默认false
 endpoints:
@@ -42,6 +52,16 @@ info:
     name: krista
     email: 1366678737@qq.com
     url: https://github.com/wdhxwz
+
+# 该配置不是必须的
+swagger2:
+  applicationName: springboot-1.x-test
+  description: aaaa
+  version: V0.1
+  userName: krista
+  url: https://github.com/wdhxwz
+  email: 1366678737@qq.com
+
 
 # database
 spring:
