@@ -1,17 +1,4 @@
-spring:
-  rabbitmq:
-    host: rabbitmq.krista.com
-    port: 5672
-    username: krista
-    password: krista008
-    virtual-host: zipkin
-  application:
-    name: api-gateway
-  zipkin:
-    base-url: http://127.0.0.1:9494
-  sleuth:
-    sampler:
-      percentage: 1.0
+
 server:
   port: 8555
 # 路由映射
@@ -26,10 +13,22 @@ zuul:
       serviceId: movie-service
 # 注册中心
 eureka:
-  instance:
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
-    health-check:
-      enabled: true
     service-url:
       defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+spring:
+  rabbitmq:
+    host: rabbitmq.krista.com
+    port: 5672
+    username: krista
+    password: krista008
+    virtual-host: zipkin
+  application:
+    name: api-gateway
+  zipkin:
+    base-url: http://127.0.0.1:9494
+  sleuth:
+    sampler:
+      percentage: 1.0
