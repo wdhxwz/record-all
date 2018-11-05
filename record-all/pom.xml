@@ -76,11 +76,11 @@
             <!--<artifactId>springfox-swagger-ui</artifactId>-->
             <!--<version>${swagger2.version}</version>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>com.krista</groupId>
-            <artifactId>spring-boot-starter-swagger2</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.krista</groupId>-->
+            <!--<artifactId>spring-boot-starter-swagger2</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
