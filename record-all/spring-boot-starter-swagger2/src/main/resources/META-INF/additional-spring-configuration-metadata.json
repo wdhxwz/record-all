@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "swagger2.enabled",
+      "type": "java.lang.Boolean",
+      "description": "enable swagger2,default value is true."
+    }]
+}
+

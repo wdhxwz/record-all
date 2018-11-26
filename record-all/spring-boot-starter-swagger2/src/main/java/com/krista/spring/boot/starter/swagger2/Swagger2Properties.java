@@ -6,11 +6,29 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "swagger2")
 @Component
 public class Swagger2Properties {
+    /**
+     * 应用名称
+     */
     private String applicationName;
+    /**
+     * 应用描述
+     */
     private String description;
+    /**
+     * 应用版本号
+     */
     private String version;
+    /**
+     * 开发用户
+     */
     private String userName;
+    /**
+     * 用户url
+     */
     private String url;
+    /**
+     * 用户邮箱
+     */
     private String email;
 
     public String getApplicationName() {
