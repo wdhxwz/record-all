@@ -1,7 +1,7 @@
 package com.krista.spring.boot.mybatis;
 
-import com.krista.spring.boot.base.MyMapper;
 import com.krista.spring.boot.mybatis.dao.IpDao;
+import com.krista.spring.boot.starter.mybatis.MyMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +19,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @date 2018/11/26 16:25
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"com.krista.spring.boot.mybatis.dao"}, markerInterface = MyMapper.class)
+@MapperScan(basePackages = {"com.krista.spring.boot.mybatis.dao"})
 public class SpringBootMybatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootMybatisApplication.class, args);

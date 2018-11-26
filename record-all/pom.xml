@@ -18,6 +18,7 @@
         <module>microservice-simple-zipkinServer</module>
         <module>spring-boot-starter-swagger2</module>
         <module>spring-boot-mybatis</module>
+        <module>krista-spring-boot-starter-mybatis</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

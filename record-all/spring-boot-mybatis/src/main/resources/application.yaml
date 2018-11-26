@@ -13,7 +13,7 @@ pagehelper:
 # 通用mapper
 mapper:
   # mapper基接口，该类不能被扫描到
-  mappers: com.krista.spring.boot.base.MyMapper
+  # mappers: com.krista.spring.boot.base.MyMapper
   not-empty: true
   identity: MYSQL
 
