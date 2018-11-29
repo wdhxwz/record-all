@@ -71,7 +71,7 @@ public class SensitiveWordInit {
 
                 // 如果该字是当前敏感词的最后一个字，则标识为结尾字
                 if (index == sensitiveWord.length() - 1) {
-                    nowMap.put(IS_END_KEY, 1);
+                    nowMap.put(IS_END_KEY, "1");
                 }
             }
         }

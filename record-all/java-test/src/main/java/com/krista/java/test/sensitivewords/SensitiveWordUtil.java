@@ -116,7 +116,7 @@ public class SensitiveWordUtil {
             if (nowMap != null) {
                 matchFlag++;
                 // 判断是否是敏感词的结尾字，如果是结尾字则判断是否继续检测
-                if ("1".equals(nowMap.get(SensitiveWordInit.IS_END_KEY) + "")) {
+                if ("1".equals(nowMap.get(SensitiveWordInit.IS_END_KEY))) {
                     flag = true;
                     // 判断过滤类型，如果是小过滤则跳出循环，否则继续循环
                     if (MatchTypeEnum.minMatchType == matchType) {
