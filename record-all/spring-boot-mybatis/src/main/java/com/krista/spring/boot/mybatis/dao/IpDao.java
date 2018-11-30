@@ -4,6 +4,8 @@ import com.krista.spring.boot.mybatis.model.Ip;
 import com.krista.spring.boot.starter.mybatis.MyMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * IpDao
  *
@@ -14,4 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IpDao extends MyMapper<Ip> {
     Ip findById(Long id);
+
+    List<Ip> findDistinct();
 }

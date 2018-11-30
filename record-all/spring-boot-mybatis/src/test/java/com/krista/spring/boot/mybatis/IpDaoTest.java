@@ -37,24 +37,33 @@ public class IpDaoTest extends BaseTest {
     public void findByIdTest() {
         BoundZSetOperations<String, String> boundZSetOps = redisTemplate.boundZSetOps(key);
         // Integer total = ipDao.selectCount(null);
-        Example example = new Example(Ip.class);
-        example = example.selectProperties("province");
-        example.setDistinct(true);
-        List<Ip> ips = ipDao.selectByExample(example);
-        List<String> provinceList = ips.stream().map(Ip::getProvince).collect(Collectors.toList());
-        provinceList.forEach(province -> {
-            Example example2 = new Example(Ip.class);
-            example2.createCriteria().andEqualTo("province", province);
-            List<Ip> list = ipDao.selectByExample(example2);
-            System.out.println(province + ",total:" + list.size());
-            list.forEach(ip -> {
-                String fromIp = ip.getFromIp();
-                String toIp = ip.getToIp();
-                String address = ip.getCountry() + ip.getProvince() + ip.getCity() + ip.getCounty() + ip.getRange();
-                boundZSetOps.add("*" + address, IpUtil.ipToLong(fromIp));
-                boundZSetOps.add(address, IpUtil.ipToLong(toIp));
-            });
+//        Example example = new Example(Ip.class);
+//        example = example.selectProperties("province");
+//        example.setDistinct(true);
+        List<Ip> ips = ipDao.findDistinct();
+        System.out.println("total:" + ips.size());
+        ips.forEach(ip -> {
+            String fromIp = ip.getFromIp();
+            String toIp = ip.getToIp();
+            String address = ip.getCountry() + ip.getProvince() + ip.getCity() + ip.getCounty();
+            boundZSetOps.add("*" + address, IpUtil.ipToLong(fromIp));
+            boundZSetOps.add(address, IpUtil.ipToLong(toIp));
         });
+
+//        List<String> provinceList = ips.stream().map(Ip::getProvince).collect(Collectors.toList());
+//        provinceList.forEach(province -> {
+//            Example example2 = new Example(Ip.class);
+//            example2.createCriteria().andEqualTo("province", province);
+//            List<Ip> list = ipDao.selectByExample(example2);
+//            System.out.println(province + ",total:" + list.size());
+//            list.forEach(ip -> {
+//                String fromIp = ip.getFromIp();
+//                String toIp = ip.getToIp();
+//                String address = ip.getCountry() + ip.getProvince() + ip.getCity() + ip.getCounty() + ip.getRange();
+//                boundZSetOps.add("*" + address, IpUtil.ipToLong(fromIp));
+//                boundZSetOps.add(address, IpUtil.ipToLong(toIp));
+//            });
+//        });
 
 //        Ip ip = ipDao.findById(1L);
 //        System.out.println("fromIp:" + ip.getFromIp() + "," + IpUtil.ipToLong(ip.getFromIp()));

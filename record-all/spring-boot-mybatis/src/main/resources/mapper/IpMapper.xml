@@ -10,5 +10,9 @@
     <select id="findById" resultType="Ip" parameterType="Long">
         SELECT * FROM tb_ip WHERE id = #{id}
     </select>
+    
+    <select id="findDistinct" resultType="Ip">
+        SELECT min(from_ip) from_ip ,max(to_ip) to_ip, country,province,city,county from tb_ip group by country,province,city,county
+    </select>
 
 </mapper>
