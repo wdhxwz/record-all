@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * SimpleApplication:遍历敏感词库,对文本进行检测
  * 优点：简单易实现
- * 缺点：文本词库很大,文本很长时，效率很差
+ * 缺点：敏感词库很大,文本很长时，效率很差
  *
  * @author dw_wangdonghong
  * @version V1.0

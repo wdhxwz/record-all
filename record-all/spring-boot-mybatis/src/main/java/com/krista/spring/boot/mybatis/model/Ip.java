@@ -21,10 +21,12 @@ public class Ip {
     /**
      * 起始ip
      */
+    @Column(name = "from_ip")
     private String fromIp;
     /**
      * 终止ip
      */
+    @Column(name = "to_ip")
     private String toIp;
     /**
      * 国家
@@ -45,6 +47,7 @@ public class Ip {
     /**
      * 行政区代码
      */
+    @Column(name = "zone_code")
     private String zoneCode;
     /**
      * 覆盖范围(km)
@@ -54,10 +57,12 @@ public class Ip {
     /**
      * 中心点经度
      */
+    @Column(name = "center_longitude")
     private Double centerLongitude;
     /**
      * 中心点维度
      */
+    @Column(name = "center_latitude")
     private Double centerLatitude;
 
     public Long getId() {

@@ -15,12 +15,12 @@ import java.util.stream.Collectors;
  * @date 2018/11/29 15:02
  */
 public class SensitiveWordInit {
-    public static final String IS_END_KEY = "isEnd";
+    static final String IS_END_KEY = "isEnd";
 
     /**
      * 敏感词库
      */
-    public HashMap sensitiveWordMap;
+    private HashMap sensitiveWordMap;
 
     /**
      * init 初始化敏感词成Map

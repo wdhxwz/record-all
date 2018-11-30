@@ -25,12 +25,12 @@ public class SpringBootMybatisApplication {
         SpringApplication.run(SpringBootMybatisApplication.class, args);
     }
 
-    @Autowired
-    private IpDao ipDao;
-
-    @Bean
-    CommandLineRunner sampleCommandLineRunner() {
-        System.out.println(this.ipDao.selectByPrimaryKey(22L));
-        return (args) -> System.out.println(this.ipDao.findById(11L));
-    }
+//    @Autowired
+//    private IpDao ipDao;
+//
+//    @Bean
+//    CommandLineRunner sampleCommandLineRunner() {
+//        System.out.println(this.ipDao.selectByPrimaryKey(22L));
+//        return (args) -> System.out.println(this.ipDao.findById(11L));
+//    }
 }

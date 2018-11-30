@@ -32,11 +32,13 @@ public class DFAApplication {
                 + "然后法.轮.功 我们的扮演的角色就是跟随着主人公的喜红客联盟 怒哀乐而过于牵强的把自己的情感也附加于银幕情节中，然后感动就流泪，"
                 + "难过就躺在某一个人的怀里尽情的阐述心扉或者手机卡复制器一个人一杯红酒一部电影在夜三.级.片 深人静的晚上，关上电话静静的发呆着。";
 
+        System.out.println("文本长度：" + text.length());
+        System.out.println("是否有敏感词：" + SensitiveWordUtil.isContainSensitiveWord(text, MatchTypeEnum.maxMatchType));
         start = System.currentTimeMillis();
         Set<String> set = SensitiveWordUtil.getSensitiveWord(text, MatchTypeEnum.maxMatchType);
         System.out.println("finish 检测,耗时(ms):" + (System.currentTimeMillis() - start) + ",敏感词个数：" + set.size());
         set.forEach(s -> {
-            System.out.println(s);
+            System.out.println("敏感词：" + s);
         });
 
         start = System.currentTimeMillis();
@@ -66,6 +68,7 @@ public class DFAApplication {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("敏感词数量：" + sensitiveWords.size());
 
         return sensitiveWords;
     }
