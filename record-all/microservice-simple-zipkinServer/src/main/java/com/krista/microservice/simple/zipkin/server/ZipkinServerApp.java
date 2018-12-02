@@ -22,7 +22,10 @@ import javax.sql.DataSource;
 @EnableZipkinStreamServer
 public class ZipkinServerApp {
     public MySQLStorage mySQLStorage(DataSource dataSource){
-        return MySQLStorage.builder().datasource(dataSource).executor(Runnable::run).build();
+        return MySQLStorage.builder()
+                .datasource(dataSource)
+                .executor(Runnable::run)
+                .build();
     }
 
     public static void main(String[] args) {

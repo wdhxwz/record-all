@@ -7,22 +7,34 @@ eureka:
         password: krista008
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
-    health-check:
-      enabled: false
     service-url:
       defaultZone: http://krista.service.registry.B:18765/eureka/,http://krista.service.registry.A:8765/eureka/
+    register-with-eureka: false
 management:
   security:
     enabled: true
 server:
-  port: 8888
+  port: 8080
 spring:
   application:
     name: admin-service
   boot:
     admin:
+      notify:
+        mail:
+          to: 1366678737@qq.com
+          from: 1366678737@qq.com
       routes:
         endpoints: env,metrics , dump , jolokia, info , configprops , trace , logfile , refresh ,flyway , liquibase , heapdump ,loggers , auditevents , hystrix.stream
+  mail:
+    host: smtp.qq.com
+    username: 1366678737@qq.com
+    password: jskzgpwwepwbbaec
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+
 logging:
   file: "logs/boot-admin-service.log"
 security:

@@ -1,15 +1,13 @@
-
 server:
   port: 8555
 # 路由映射
 zuul:
   routes:
     user-service:
-      path: /user-api/**
-      # url: http://127.0.0.1:8000
+      path: /user/**
       serviceId: user-service
     movie-service:
-      path: /movie-api/**
+      path: /movie/**
       serviceId: movie-service
 # 注册中心
 eureka:
@@ -26,9 +24,7 @@ spring:
     password: krista008
     virtual-host: zipkin
   application:
-    name: api-gateway
-  zipkin:
-    base-url: http://127.0.0.1:9494
+    name: zuul-gateway
   sleuth:
     sampler:
       percentage: 1.0
