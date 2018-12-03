@@ -9,6 +9,13 @@ zuul:
     movie-service:
       path: /movie/**
       serviceId: movie-service
+  retryable: true
+user-service:
+  ribbon:
+    okToRetryOnAllOperations: true
+    maxAutoRetiesNextServer: 3
+    maxAutoRetries: 3
+
 # 注册中心
 eureka:
   client:

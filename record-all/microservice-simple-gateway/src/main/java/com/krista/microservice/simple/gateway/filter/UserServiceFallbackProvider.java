@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 /**
  * 用户服务熔断器
  */
-@Component
+// @Component
 public class UserServiceFallbackProvider implements FallbackProvider {
     private static String serviceId = "user-service";
     private static Logger logger = LoggerFactory.getLogger(UserServiceFallbackProvider.class);
