@@ -26,8 +26,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <spring.cloud.version>Edgware.SR1</spring.cloud.version>
-        <springboot.version>1.5.9.RELEASE</springboot.version>
+        <spring.cloud.version>Edgware.RELEASE</spring.cloud.version>
+        <springboot.version>1.5.18.RELEASE</springboot.version>
         <swagger2.version>2.6.0</swagger2.version>
     </properties>
 
