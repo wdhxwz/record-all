@@ -31,7 +31,7 @@ public class SpringCacheTest {
     @Test
     public void test() throws IOException {
         logger.info("invoke userService.clearCache()");
-        userService.clearCache();
+        // userService.clearCache();
 
         logger.info("invoke userService.findById(1L)");
         User user = userService.findById(1L);

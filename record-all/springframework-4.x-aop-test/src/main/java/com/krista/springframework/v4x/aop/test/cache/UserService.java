@@ -29,7 +29,7 @@ public class UserService {
     public User delete(User user) {
         return user;
     }
-    @Cacheable(value = "mycache", key = "#id")
+    @Cacheable(cacheNames = "mycache", key = "#id")
     public User findById(final Long id) {
         System.out.println("cache miss, invoke find by id, id:" + id);
         Random random = new Random();
