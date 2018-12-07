@@ -12,12 +12,12 @@ import javax.sql.DataSource;
 
 /**
  * ZipkinServerApp
+ * https://blog.csdn.net/manzhizhen/article/details/52811600
  *
  * @author dw_wangdonghong
  * @date 2018/10/29 19:53
  */
 @SpringBootApplication
-// @EnableZipkinServer
 @EnableEurekaClient
 @EnableZipkinStreamServer
 public class ZipkinServerApp {
