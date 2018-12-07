@@ -19,6 +19,7 @@
         <module>spring-boot-starter-swagger2</module>
         <module>spring-boot-mybatis</module>
         <module>krista-spring-boot-starter-mybatis</module>
+        <module>base-eureka-server</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -55,9 +56,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
