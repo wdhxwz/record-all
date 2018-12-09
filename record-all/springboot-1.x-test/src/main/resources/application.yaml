@@ -29,18 +29,14 @@ security:
 management:
   security:
     enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: ALWAYS
 
 # 开启/shutdown,默认false
 endpoints:
   shutdown:
     enabled: false
+  health:
+    enabled: true
+  enabled: false
 
 # 定义系统的info信息
 info:
@@ -65,6 +61,8 @@ swagger2:
 
 # database
 spring:
+  http:
+    log-request-details: true
   rabbitmq:
     host: rabbitmq.krista.com
     port: 5672
@@ -81,8 +79,6 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
-  zipkin:
-    base-url: http://127.0.0.1:9494
   sleuth:
     sampler:
       percentage: 1.0
