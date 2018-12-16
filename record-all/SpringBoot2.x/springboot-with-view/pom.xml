@@ -11,7 +11,7 @@
     <artifactId>springboot-with-view</artifactId>
 
     <properties>
-        <springboot.version>2.1.1.RELEASE</springboot.version>
+       <!-- <springboot.version>2.1.1.RELEASE</springboot.version>-->
     </properties>
 
     <dependencies>

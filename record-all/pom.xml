@@ -30,6 +30,7 @@
         <junit.version>4.12</junit.version>
         <spring.cloud.version>Edgware.RELEASE</spring.cloud.version>
         <springboot.version>1.5.18.RELEASE</springboot.version>
+     <!--   <springboot.version>2.1.1.RELEASE</springboot.version>-->
         <swagger2.version>2.6.0</swagger2.version>
     </properties>
 
