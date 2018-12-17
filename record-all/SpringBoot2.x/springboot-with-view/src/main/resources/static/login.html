@@ -6,17 +6,17 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>项目-登录</title>
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="/libs/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="libs/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/libs/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="libs/AdminLTE/dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <!--    <link rel="stylesheet" href="/libs/plugins/iCheck/square/blue.css">-->
     <!-- Vue -->
-    <script src="/libs/Vue/dist/vue.min.js"></script>
+    <script src="libs/Vue/dist/vue.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,7 +24,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- toastr 消息提示框 -->
-    <link rel="stylesheet" href="/libs/others/toastr.min.css">
+    <link rel="stylesheet" href="libs/others/toastr.min.css">
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -71,18 +71,18 @@
 <!-- /.login-box -->
 
 <!-- jQuery 3 -->
-<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <!--<script src="/libs/plugins/iCheck/icheck.min.js"></script>-->
 <!-- js md5 -->
-<script src="/libs/others/md5.min.js"></script>
+<script src="libs/others/md5.min.js"></script>
 <!-- axios for http request -->
-<script src="/libs/others/axios.min.js"></script>
+<script src="libs/others/axios.min.js"></script>
 <!-- toastr for message tip -->
-<script src="/libs/others/toastr.min.js"></script>
-<script src="/script/config.js"></script>
+<script src="libs/others/toastr.min.js"></script>
+<script src="script/config.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
@@ -123,7 +123,7 @@
                 }).then(function (response) {
                     var data = response.data;
                     if (data && data.code === 200) {
-                        window.location="/index.html";
+                        window.location = "/index.html";
                     } else {
                         toastr.clear();
                         toastr.info(data.message);
