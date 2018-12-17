@@ -19,4 +19,27 @@
 
  https://blog.csdn.net/wojiaomaxiaoqi/article/details/79416039
 
-
+<li v-for="menu in menus"
+                    :key="menu.menuId"
+                    :menu="menu"
+                    :class="{active:menu.open,treeview:menu.list && menu.list.length > 0}">
+                    <a :href="getValue(menu.url,'','#')">
+                        <i :class="getValue(menu.icon,'fa fa-','fa fa-circle-o')"></i>
+                        <span>{{menu.name}}</span>
+                        <span v-if="menu.list && menu.list.length > 0" class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <span v-if="menu.list && menu.list.length > 0" class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    <ul class="treeview-menu" v-if="menu.list && menu.list.length > 0">
+                        <li v-for="submenu in menu.list">
+                            <!--:href="getValue(submenu.url,'','#')"-->
+                            <a href="#">
+                                <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>
+                                {{ submenu.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>

@@ -81,7 +81,6 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li v-for="menu in menus"
                     :key="menu.menuId"
-                    :menu="menu"
                     :class="{active:menu.open,treeview:menu.list && menu.list.length > 0}">
                     <a :href="getValue(menu.url,'','#')">
                         <i :class="getValue(menu.icon,'fa fa-','fa fa-circle-o')"></i>
@@ -90,12 +89,10 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
-                    <span v-if="menu.list && menu.list.length > 0" class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
                     <ul class="treeview-menu" v-if="menu.list && menu.list.length > 0">
                         <li v-for="submenu in menu.list">
-                            <a :href="getValue(submenu.url,'','#')">
+                            <!--:href="getValue(submenu.url,'','#')"-->
+                            <a href="#">
                                 <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>
                                 {{ submenu.name }}
                             </a>
@@ -675,8 +672,6 @@
 <script src="libs/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="libs/AdminLTE/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="libs/AdminLTE/dist/js/pages/dashboard.js"></script>
 <!-- Vue -->
 <script src="libs/Vue/dist/vue.min.js"></script>
 <script src="script/menuList.js"></script>
