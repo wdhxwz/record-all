@@ -78,28 +78,7 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li v-for="menu in menus"
-                    :key="menu.menuId"
-                    :class="{active:menu.open,treeview:menu.list && menu.list.length > 0}">
-                    <a :href="getValue(menu.url,'','#')">
-                        <i :class="getValue(menu.icon,'fa fa-','fa fa-circle-o')"></i>
-                        <span>{{menu.name}}</span>
-                        <span v-if="menu.list && menu.list.length > 0" class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" v-if="menu.list && menu.list.length > 0">
-                        <li v-for="submenu in menu.list">
-                            <!--:href="getValue(submenu.url,'','#')"-->
-                            <a href="#">
-                                <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>
-                                {{ submenu.name }}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <sidebar-menu :menus="menus"></sidebar-menu>
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -674,7 +653,10 @@
 <script src="libs/AdminLTE/dist/js/adminlte.min.js"></script>
 <!-- Vue -->
 <script src="libs/Vue/dist/vue.min.js"></script>
+<!-- axios for http request -->
+<script src="libs/others/axios.min.js"></script>
 <script src="script/menuList.js"></script>
+<script src="script/components/sidebar-menu.js"></script>
 
 <script>
     var app = new Vue({
@@ -685,15 +667,7 @@
         created: function () {
             this.menus = menuList;
         },
-        methods: {
-            getValue: function (param, prefix, defaultValue) {
-                if (param == null || param == '') {
-                    return defaultValue;
-                }
-
-                return prefix + param;
-            }
-        }
+        methods: {}
     });
 </script>
 
