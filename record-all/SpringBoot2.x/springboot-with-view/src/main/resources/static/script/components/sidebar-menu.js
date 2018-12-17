@@ -40,6 +40,10 @@
             };
 
             return options;
+
+            function clickMenuCycle(item) {
+                console.log(item)
+            }
         }
     });
 }(jQuery, Vue, axios));

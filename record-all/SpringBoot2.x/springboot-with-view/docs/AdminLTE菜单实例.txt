@@ -43,3 +43,9 @@
                         </li>
                     </ul>
                 </li>
+https://github.com/shimh-develop/blog-vue-springboot
+https://github.com/litzhou/Adminlte-boot
+https://github.com/liujians/vue-adminLte-vue-router
+https://github.com/fantasykai/vue-admin-manager
+
+

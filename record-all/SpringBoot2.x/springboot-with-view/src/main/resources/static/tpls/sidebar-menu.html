@@ -13,7 +13,7 @@
         <ul class="treeview-menu" v-if="menu.list && menu.list.length > 0">
             <li v-for="submenu in menu.list">
                 <!--:href="getValue(submenu.url,'','#')"-->
-                <a href="#">
+                <a :href="getValue(submenu.url,'','#')">
                     <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>
                     {{ submenu.name }}
                 </a>
