@@ -1,5 +1,18 @@
 var menuList = [
     {
+        "icon": "home",
+        "menuId": 11,
+        "name": "首页",
+        "open": false,
+        "orderNum": 2,
+        "parentId": 0,
+        "parentName": "",
+        "perms": "",
+        "type": 1,
+        "url": "",
+        "list": []
+    },
+    {
         "icon": "server",
         "menuId": 1,
         "name": "系统管理",
