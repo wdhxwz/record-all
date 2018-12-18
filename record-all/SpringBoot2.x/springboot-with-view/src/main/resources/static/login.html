@@ -107,12 +107,13 @@
                     } else {
                         self.productName = config.defaultProductName;
                     }
+                    localStorage.setItem("productName", self.productName);
                 }).catch(function (error) {
-
             })
         },
         methods: {
             login: function () {
+                var self = this;
                 if (!this.checkLoginParam()) {
                     return false;
                 }
@@ -124,6 +125,9 @@
                     var data = response.data;
                     if (data && data.code === 200) {
                         window.location = "/index.html";
+
+                        // 设置用户名称
+                        localStorage.setItem("userName", self.userName)
                     } else {
                         toastr.clear();
                         toastr.info(data.message);

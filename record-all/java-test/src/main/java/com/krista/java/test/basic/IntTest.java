@@ -1,5 +1,8 @@
 package com.krista.java.test.basic;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * IntTest
  *
@@ -13,5 +16,12 @@ public class IntTest {
         System.out.println(Math.abs(Integer.MIN_VALUE));
         System.out.println(-Integer.MIN_VALUE);
         Integer.parseInt("123");
+
+        Map<String, Integer> map2 = new HashMap<>(4);
+        for (Map.Entry<String, Integer> entry : map2.entrySet()) {
+            System.out.println(entry.getKey() + "=" + entry.getValue());
+        }
+
+        System.out.println(-95 % 12);
     }
 }

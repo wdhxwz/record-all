@@ -44,13 +44,13 @@
             <!-- Logo -->
             <a href="index.html" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>logo</b></span>
+                <span class="logo-mini"><img src="eagle-logo.png"></span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>项目名称</b></span>
+                <span class="logo-lg"><b>{{productName}}</b></span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
+                <!-- 菜单切换 -->
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">Toggle navigation</span>
                 </a>
@@ -60,12 +60,12 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="libs/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs">用户名</span>
+                                <span class="hidden-xs">{{userName}}</span>
                             </a>
                         </li>
                         <!-- 退出按钮 -->
                         <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-sign-out"></i></a>
+                            <a href="#" data-toggle="control-sidebar" v-on:click="logout"><i class="fa fa-sign-out"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -100,16 +100,25 @@
         el: '#app',
         data: {
             menus: [],
-            iframeSrc: ""
+            iframeSrc: "",
+            userName: "",
+            productName: ""
         },
         created: function () {
             this.menus = menuList;
+            this.userName = localStorage.getItem("userName");
+            this.productName = localStorage.getItem("productName");
         },
         mounted: function () {
             this.menus = menuList;
             this.iframeSrc = "test.html";
         },
-        methods: {}
+        methods: {
+            // 退出事件
+            logout: function () {
+                console.log("logout...")
+            }
+        }
     });
 </script>
 </body>
