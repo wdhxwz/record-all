@@ -33,8 +33,9 @@
     <script src="libs/Vue/dist/vue.min.js"></script>
     <script src="libs/others/axios.min.js"></script>
 
-    <!-- 自定义样式 -->
+    <!-- 自定义样式与js -->
     <link rel="stylesheet" href="css/gview.css">
+    <script src="script/config.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div id="app" v-cloak>
@@ -106,8 +107,8 @@
         },
         created: function () {
             this.menus = menuList;
-            this.userName = localStorage.getItem("userName");
-            this.productName = localStorage.getItem("productName");
+            this.userName = localStorage.getItem(config.userNameKey);
+            this.productName = localStorage.getItem(config.projectNameKey);
         },
         mounted: function () {
             this.menus = menuList;

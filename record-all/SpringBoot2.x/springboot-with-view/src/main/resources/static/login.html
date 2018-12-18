@@ -107,7 +107,7 @@
                     } else {
                         self.productName = config.defaultProductName;
                     }
-                    localStorage.setItem("productName", self.productName);
+                    localStorage.setItem(config.projectNameKey, self.productName);
                 }).catch(function (error) {
             })
         },
@@ -127,7 +127,7 @@
                         window.location = "/index.html";
 
                         // 设置用户名称
-                        localStorage.setItem("userName", self.userName)
+                        localStorage.setItem(config.userNameKey, self.userName)
                     } else {
                         toastr.clear();
                         toastr.info(data.message);
