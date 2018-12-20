@@ -96,6 +96,15 @@ public class ShiroConfiguration {
         return redisSessionDAO;
     }
 
+    /**
+     * * ShiroFilterFactoryBean 处理拦截资源文件问题。
+     * * 注意：初始化ShiroFilterFactoryBean的时候需要注入：SecurityManager
+     * * Web应用中,Shiro可控制的Web请求必须经过Shiro主过滤器的拦截
+     * <p>
+     * anon:所有url都都可以匿名访问;
+     * authc: 需要认证才能进行访问;
+     * user:配置记住我或认证通过可以访问；
+     */
     @Bean
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
         LOGGER.info("ShiroConfiguration.shirFilter()");
@@ -140,6 +149,9 @@ public class ShiroConfiguration {
         return hashedCredentialsMatcher;
     }
 
+    /**
+     * 核心安全事务管理器
+     */
     @Bean
     public SecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
@@ -154,6 +166,7 @@ public class ShiroConfiguration {
 
     /**
      * 认证与授权
+     * 身份认证realm; (这个需要自己写，账号密码校验；权限等)
      */
     @Bean
     public EagleShiroRealm eagleShiroRealm() {
