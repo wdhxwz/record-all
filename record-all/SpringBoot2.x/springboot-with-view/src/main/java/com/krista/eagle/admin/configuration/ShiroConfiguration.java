@@ -28,7 +28,7 @@ import java.util.Map;
  * @version V1.0
  * @since 2018/12/19 19:39
  */
-@Configuration
+// @Configuration
 public class ShiroConfiguration {
     /**
      * logger

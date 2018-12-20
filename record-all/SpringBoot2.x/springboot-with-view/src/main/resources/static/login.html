@@ -29,7 +29,8 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page"
+      style="background:url(images/login_bg_0.jpg) #f8f6e9 0 0 no-repeat;">
 <div class="login-box" id="app">
     <div class="login-logo">
         <a><b>{{productName}}</b></a>
@@ -45,6 +46,16 @@
         <div class="form-group has-feedback">
             <input v-model="password" type="password" class="form-control" placeholder="登录密码">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="form-group has-feedback">
+                    <input v-model="imgCode" type="text" class="form-control" placeholder="验证码">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <img :src="imgSrc" v-on:click="refreshCaptcha"/>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-8">
@@ -85,71 +96,78 @@
 <script src="script/config.js"></script>
 <script>
     var app = new Vue({
-        el: '#app',
-        data: {
-            userName: "",
-            password: "",
-            rememberMe: false,
-            productName: ""
-        },
-        created: function () {
-            var self = this;
-            toastr.options = {
-                positionClass: "toast-top-center",
-                showDuration: 5,
-                hideDuration: 0
-            };
-            axios.get("/product/info?productId=" + config.productId)
-                .then(function (response) {
-                    var data = response.data;
-                    if (data && data.code === 200 && data.data) {
-                        self.productName = data.data;
-                    } else {
-                        self.productName = config.defaultProductName;
-                    }
-                    localStorage.setItem(config.projectNameKey, self.productName);
-                }).catch(function (error) {
-            })
-        },
-        methods: {
-            login: function () {
-                var self = this;
-                if (!this.checkLoginParam()) {
-                    return false;
-                }
-                axios.post("/user/login", {
-                    userName: this.userName,
-                    password: md5(this.password),
-                    rememberMe: this.rememberMe
-                }).then(function (response) {
-                    var data = response.data;
-                    if (data && data.code === 200) {
-                        window.location = "/index.html";
-
-                        // 设置用户名称
-                        localStorage.setItem(config.userNameKey, self.userName)
-                    } else {
-                        toastr.clear();
-                        toastr.info(data.message);
-                    }
-                }).catch(function (error) {
-                    console.error(error);
-                });
+            el: '#app',
+            data: {
+                userName: "",
+                password: "",
+                rememberMe: false,
+                productName: "",
+                imgCode: "",
+                imgSrc: ""
             },
-            checkLoginParam: function () {
-                toastr.clear();
-                if ($.trim(this.userName) === "") {
-                    toastr.warning("请填写用户名");
-                    return false;
+            created: function () {
+                this.imgSrc = "/captcha.jpg";
+                var self = this;
+                toastr.options = {
+                    positionClass: "toast-top-center",
+                    showDuration: 5,
+                    hideDuration: 0
+                };
+                axios.get("/product/info?productId=" + config.productId)
+                    .then(function (response) {
+                        var data = response.data;
+                        if (data && data.code === 200 && data.data) {
+                            self.productName = data.data;
+                        } else {
+                            self.productName = config.defaultProductName;
+                        }
+                        localStorage.setItem(config.projectNameKey, self.productName);
+                    }).catch(function (error) {
+                })
+            },
+            methods: {
+                login: function () {
+                    var self = this;
+                    if (!this.checkLoginParam()) {
+                        return false;
+                    }
+                    axios.post("/user/login", {
+                        userName: this.userName,
+                        password: md5(this.password),
+                        rememberMe: this.rememberMe
+                    }).then(function (response) {
+                        var data = response.data;
+                        if (data && data.code === 200) {
+                            window.location = "/index.html";
+
+                            // 设置用户名称
+                            localStorage.setItem(config.userNameKey, self.userName)
+                        } else {
+                            toastr.clear();
+                            toastr.info(data.message);
+                        }
+                    }).catch(function (error) {
+                        console.error(error);
+                    });
+                },
+                checkLoginParam: function () {
+                    toastr.clear();
+                    if ($.trim(this.userName) === "") {
+                        toastr.warning("请填写用户名");
+                        return false;
+                    }
+                    if ($.trim(this.password) === "") {
+                        toastr.warning("请输入登录密码");
+                        return false;
+                    }
+                    return true;
+                },
+                refreshCaptcha: function () {
+                    this.imgSrc = "/captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24);
                 }
-                if ($.trim(this.password) === "") {
-                    toastr.warning("请输入登录密码");
-                    return false;
-                }
-                return true;
             }
-        }
-    });
+        })
+    ;
 </script>
 </body>
 </html>
