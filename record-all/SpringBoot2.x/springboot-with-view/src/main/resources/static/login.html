@@ -28,9 +28,9 @@
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="css/login.css">
 </head>
-<body class="hold-transition login-page"
-      style="background:url(images/login_bg_0.jpg) #f8f6e9 0 0 no-repeat;">
+<body class="hold-transition login-page">
 <div class="login-box" id="app">
     <div class="login-logo">
         <a><b>{{productName}}</b></a>
@@ -96,78 +96,82 @@
 <script src="script/config.js"></script>
 <script>
     var app = new Vue({
-            el: '#app',
-            data: {
-                userName: "",
-                password: "",
-                rememberMe: false,
-                productName: "",
-                imgCode: "",
-                imgSrc: ""
-            },
-            created: function () {
-                this.imgSrc = "/captcha.jpg";
+        el: '#app',
+        data: {
+            userName: "",
+            password: "",
+            rememberMe: false,
+            productName: "",
+            imgCode: "",
+            imgSrc: ""
+        },
+        created: function () {
+            this.imgSrc = "/captcha.jpg";
+            var self = this;
+            toastr.options = {
+                positionClass: "toast-top-center",
+                showDuration: 5,
+                hideDuration: 0
+            };
+            axios.get("/product/info?productId=" + config.productId)
+                .then(function (response) {
+                    var data = response.data;
+                    if (data && data.code === 200 && data.data) {
+                        self.productName = data.data;
+                    } else {
+                        self.productName = config.defaultProductName;
+                    }
+                    localStorage.setItem(config.projectNameKey, self.productName);
+                }).catch(function (error) {
+            })
+        },
+        methods: {
+            login: function () {
                 var self = this;
-                toastr.options = {
-                    positionClass: "toast-top-center",
-                    showDuration: 5,
-                    hideDuration: 0
-                };
-                axios.get("/product/info?productId=" + config.productId)
-                    .then(function (response) {
-                        var data = response.data;
-                        if (data && data.code === 200 && data.data) {
-                            self.productName = data.data;
-                        } else {
-                            self.productName = config.defaultProductName;
-                        }
-                        localStorage.setItem(config.projectNameKey, self.productName);
-                    }).catch(function (error) {
-                })
-            },
-            methods: {
-                login: function () {
-                    var self = this;
-                    if (!this.checkLoginParam()) {
-                        return false;
-                    }
-                    axios.post("/user/login", {
-                        userName: this.userName,
-                        password: md5(this.password),
-                        rememberMe: this.rememberMe
-                    }).then(function (response) {
-                        var data = response.data;
-                        if (data && data.code === 200) {
-                            window.location = "/index.html";
-
-                            // 设置用户名称
-                            localStorage.setItem(config.userNameKey, self.userName)
-                        } else {
-                            toastr.clear();
-                            toastr.info(data.message);
-                        }
-                    }).catch(function (error) {
-                        console.error(error);
-                    });
-                },
-                checkLoginParam: function () {
-                    toastr.clear();
-                    if ($.trim(this.userName) === "") {
-                        toastr.warning("请填写用户名");
-                        return false;
-                    }
-                    if ($.trim(this.password) === "") {
-                        toastr.warning("请输入登录密码");
-                        return false;
-                    }
-                    return true;
-                },
-                refreshCaptcha: function () {
-                    this.imgSrc = "/captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24);
+                if (!this.checkLoginParam()) {
+                    return false;
                 }
+                axios.post("/user/login", {
+                    userName: this.userName,
+                    password: md5(this.password),
+                    rememberMe: this.rememberMe,
+                    imgCode: this.imgCode
+                }).then(function (response) {
+                    var data = response.data;
+                    if (data && data.code === 200) {
+                        window.location = "/index.html";
+
+                        // 设置用户名称
+                        localStorage.setItem(config.userNameKey, self.userName)
+                    } else {
+                        toastr.clear();
+                        toastr.info(data.message);
+                    }
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            },
+            checkLoginParam: function () {
+                toastr.clear();
+                if ($.trim(this.userName) === "") {
+                    toastr.warning("请填写用户名");
+                    return false;
+                }
+                if ($.trim(this.password) === "") {
+                    toastr.warning("请输入登录密码");
+                    return false;
+                }
+                if ($.trim(this.imgCode) === "") {
+                    toastr.warning("请输入图片验证码");
+                    return false;
+                }
+                return true;
+            },
+            refreshCaptcha: function () {
+                this.imgSrc = "/captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24);
             }
-        })
-    ;
+        }
+    });
 </script>
 </body>
 </html>
