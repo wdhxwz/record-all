@@ -11,7 +11,7 @@
     <artifactId>springboot-with-view</artifactId>
 
     <properties>
-       <!-- <springboot.version>2.1.1.RELEASE</springboot.version>-->
+        <!-- <springboot.version>2.1.1.RELEASE</springboot.version>-->
         <shiro.version>1.4.0</shiro.version>
         <shiro-redis.version>3.2.2</shiro-redis.version>
     </properties>
@@ -38,6 +38,13 @@
             <groupId>org.crazycake</groupId>
             <artifactId>shiro-redis</artifactId>
             <version>${shiro-redis.version}</version>
+        </dependency>
+
+        <!-- code generator -->
+        <dependency>
+            <groupId>com.krista</groupId>
+            <artifactId>code-generator</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

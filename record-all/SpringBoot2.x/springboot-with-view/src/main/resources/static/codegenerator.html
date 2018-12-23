@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>项目-登录</title>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="libs/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="libs/AdminLTE/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <!--    <link rel="stylesheet" href="/libs/plugins/iCheck/square/blue.css">-->
+    <!-- Vue -->
+    <script src="libs/Vue/dist/vue.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- toastr 消息提示框 -->
+    <link rel="stylesheet" href="libs/others/toastr.min.css">
+    <!-- iview -->
+    <link rel="stylesheet" href="libs/iview/iview.css">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="css/login.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" id="app">
+    <!-- /.login-logo -->
+    <div class="login-box-body" style="width: 528px;">
+        <!--<form>-->
+        <div class="row">
+            <div class="col-xs-3" style="padding-right:0px;">
+                <div class="form-group">
+                    <select class="form-control" v-model="selectDbType">
+                        <option v-for="item in dbTypes" :value="item.value" :key="item.value">
+                            {{ item.value }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <div class="form-group">
+                    <input v-model="host" type="text" class="form-control" placeholder="sql主机">
+                </div>
+            </div>
+            <div class="col-xs-2" style="padding-left:0px;">
+                <div class="form-group">
+                    <input v-model="port" type="text" class="form-control" placeholder="端口号">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group has-feedback">
+            <input v-model="userName" type="text" class="form-control" placeholder="登录用户">
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+
+        <div class="form-group has-feedback">
+            <input v-model="password" type="password" class="form-control" placeholder="登录密码">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <button class="btn btn-success btn-block btn-flat "
+                            v-on:click="nextStep">下一步 →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" v-if="dbList.length > 0">
+            <div class="col-xs-6">
+                <div class="form-group has-feedback">
+                    请选择数据库:
+                    <Select v-model="selectDb" clearable style="height: 34px;width: 122px;">
+                        <Option v-for="item in dbList" :value="item.value" :key="item.value">
+                            {{ item.value }}
+                        </Option>
+                    </Select>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn btn-primary btn-block btn-flat" v-on:click="dbSelect"
+                        style="margin-left:28px;width: 200px;">确定
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group" v-if="tableList.length > 0">
+            <Transfer
+                    :data="tableList"
+                    :render-format="render"
+                    :target-keys="selectedTableList"
+                    :titles="['源数据表','选中数据表']"
+                    :operations="['取消','选中']"
+                    :list-style="listStyle"
+                    @on-change="handleChange1">
+            </Transfer>
+        </div>
+
+        <div class="row" v-if="selectedTableList.length > 0">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <input class="form-control" v-model="basePackage" placeholder="base package"
+                           style="width: 200px;"/>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <input class="form-control" v-model="author" placeholder="author"
+                           style="margin-left:28px;width: 200px;"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" v-if="selectedTableList.length > 0">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <Checkbox v-model="isGenerateModel" disabled>生成Model</Checkbox>
+                    <Checkbox v-model="isGenerateMapper">生成Map</Checkbox>
+                    <Checkbox v-model="isGenerateMapperXml">生成Map Xml</Checkbox>
+                    <Checkbox v-model="isGenerateService">生成Service</Checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" v-if="selectedTableList.length > 0">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <button class="btn btn-success btn-block btn-flat" v-on:click="generate">生成代码
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- </form>-->
+    </div>
+    <!-- /.login-box-body -->
+
+    <!-- 确认弹窗 -->
+    <Modal v-model="modal"
+           title="确认信息"
+           @on-ok="ok"
+           @on-cancel="cancel">
+        <div>
+            <p>选中数据表：
+                <Tag v-for="item in selectedTableList" color="green">{{item}}</Tag>
+            </p>
+            <p>basePackage：{{basePackage}}</p>
+            <p>author：{{author}}</p>
+            <p>生成范围：
+                <label v-if="isGenerateModel">model;</label>
+                <label v-if="isGenerateMapper">mapper;</label>
+                <label v-if="isGenerateMapperXml">mapper xml;</label>
+                <label v-if="isGenerateService">service</label>
+            </p>
+        </div>
+    </Modal>
+</div>
+<!-- /.login-box -->
+
+
+<!-- jQuery 3 -->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<!--<script src="/libs/plugins/iCheck/icheck.min.js"></script>-->
+<!-- js md5 -->
+<script src="libs/others/md5.min.js"></script>
+<!-- axios for http request -->
+<script src="libs/others/axios.min.js"></script>
+<!-- toastr for message tip -->
+<script src="libs/others/toastr.min.js"></script>
+<!-- iview -->
+<script src="libs/iview/iview.min.js"></script>
+<script src="script/config.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            userName: "root",
+            password: "1q2w#E$R",
+            host: "mysql.krista.com",
+            port: "3306",
+            firstStep: true,
+            dbTypes: [],
+            selectDbType: "",
+            dbList: [],
+            selectDb: "",
+            tableList: [],
+            selectedTableList: [],
+            isGenerateModel: true,
+            isGenerateMapper: false,
+            isGenerateMapperXml: false,
+            isGenerateService: false,
+            basePackage: "",
+            author: "",
+            modal: false,
+            listStyle: {
+                width: '200px',
+                height: '300px'
+            }
+        },
+        created: function () {
+            var self = this;
+            toastr.options = {
+                positionClass: "toast-top-center",
+                showDuration: 5,
+                hideDuration: 0
+            };
+            // 获取支持的数据库
+            axios.get("/codegenerator/listDbTypes")
+                .then(function (response) {
+                    var data = response.data;
+                    if (data && data.code === 200) {
+                        self.dbTypes = data.data;
+                        $.each(data.data, function (index, item) {
+                            if (item.selected) {
+                                self.selectDbType = item.value;
+                            }
+                        });
+                    } else {
+                        toastr.clear();
+                        toastr.info(data.message);
+                    }
+                })
+        },
+        methods: {
+            nextStep: function () {
+                var self = this;
+                if (!this.checkParam()) {
+                    return false;
+                }
+                axios.post("/codegenerator/step1", {
+                    dbType: self.selectDbType,
+                    host: self.host,
+                    port: self.port,
+                    userName: self.userName,
+                    password: self.password
+                }).then(function (response) {
+                    self.dbList = response.data.data;
+                }).catch(function (error) {
+                })
+            },
+            checkParam: function () {
+                toastr.clear();
+                if ($.trim(this.host) === "") {
+                    toastr.warning("请填写数据库主机");
+                    return false;
+                }
+                if ($.trim(this.port) === "") {
+                    toastr.warning("请填写数据库端口");
+                    return false;
+                }
+                if ($.trim(this.userName) === "") {
+                    toastr.warning("请填写数据库登录名");
+                    return false;
+                }
+                if ($.trim(this.password) === "") {
+                    toastr.warning("请填写数据库登录密码");
+                    return false;
+                }
+
+                return true;
+            },
+            dbSelect: function () {
+                toastr.clear();
+                var self = this;
+                if ($.trim(self.selectDb) === "") {
+                    toastr.warning("请选择数据库");
+                    return false;
+                }
+                axios.get("/codegenerator/getTableList?dbName=" + self.selectDb)
+                    .then(function (response) {
+                        var data = response.data.data;
+                        self.tableList = [];
+                        $.each(data, function (index, item) {
+                            self.tableList.push({
+                                key: item.tableName,
+                                description: item.comment,
+                                label: item.tableName,
+                                disabled: false
+                            });
+                        })
+                    }).catch(function (error) {
+                });
+            },
+            handleChange1: function (newTargetKeys, direction, moveKeys) {
+                this.selectedTableList = newTargetKeys;
+            },
+            render: function (item) {
+                return item.label;
+            },
+            generate: function () {
+                toastr.clear();
+                if ($.trim(this.basePackage) === "") {
+                    toastr.warning("请填写basePackage");
+                    return false;
+                }
+                if ($.trim(this.author) === "") {
+                    toastr.warning("请填写author");
+                    return false;
+                }
+                this.modal = true;
+            },
+            cancel: function () {
+                this.modal = false;
+            },
+            ok: function () {
+                var self = this;
+                // private String basePackage;
+                // private String author;
+                // private boolean isGenerateModel;
+                // private boolean isGenerateMapper;
+                // private boolean isGenerateMapperXml;
+                // private boolean isGenerateService;
+                // private List<String> tables;
+                axios.post("/codegenerator/generate", {
+                    basePackage: self.basePackage,
+                    author: self.author,
+                    generateModel: self.isGenerateModel,
+                    generateMapper: self.isGenerateMapper,
+                    generateMapperXml: self.isGenerateMapperXml,
+                    generateService: self.isGenerateService,
+                    tables: self.selectedTableList
+                }).then(function (response) {
+
+                }).catch(function (error) {
+                })
+            }
+        }
+    });
+</script>
+</body>
+</html>

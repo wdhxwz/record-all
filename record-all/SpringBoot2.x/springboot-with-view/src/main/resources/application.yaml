@@ -1,2 +1,9 @@
 server:
   port: 9991
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql.krista.com:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: 1q2w#E$R
+    type: com.alibaba.druid.pool.DruidDataSource
