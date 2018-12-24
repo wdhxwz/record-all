@@ -32,6 +32,10 @@ public class DbOperator {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    public void close() {
+        ((DruidDataSource) jdbcTemplate.getDataSource()).close();
+    }
+
     /**
      * 获取数据库,去掉系统数据库
      */

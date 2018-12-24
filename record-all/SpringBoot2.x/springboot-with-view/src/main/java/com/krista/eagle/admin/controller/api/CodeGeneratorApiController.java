@@ -69,6 +69,9 @@ public class CodeGeneratorApiController {
         String url = codeGeneratorProperty.getDbUrl();
         LOGGER.info("dbUrl:{}", url);
         try {
+            if (dbOperator != null) {
+                dbOperator.close();
+            }
             dbOperator = new DbOperator(url, param.getUserName(), param.getPassword());
             return new JsonResponse<>(
                     dbOperator.databases().stream()
