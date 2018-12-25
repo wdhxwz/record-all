@@ -13,9 +13,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestClass {
-    @Test
     @Test2
-    public void say(){
+    @Test
+    @Test
+    public void say() {
         System.out.println("hello");
     }
 }

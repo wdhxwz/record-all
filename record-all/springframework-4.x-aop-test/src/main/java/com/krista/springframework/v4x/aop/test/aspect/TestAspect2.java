@@ -29,7 +29,7 @@ public class TestAspect2 {
     /**
      * 定义切点
      */
-    @Pointcut("@annotation(com.krista.springframework.v4x.aop.test.annotation.Test)")
+    @Pointcut("@annotation(com.krista.springframework.v4x.aop.test.annotation.Tests)")
     public void annotationPointCut() {
         // 方法定义
     }
@@ -39,6 +39,6 @@ public class TestAspect2 {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Method method = methodSignature.getMethod();
 
-        LOGGER.info(method.getName());
+        LOGGER.info(method.getName() + "tests");
     }
 }
