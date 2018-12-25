@@ -34,27 +34,27 @@ public class CodeGeneratorApplication {
 
     public static void main(String[] args) throws InterruptedException, SQLException, InvalidConfigurationException, IOException {
         // test();
-        // mybatisGenerator();
-        String url = "jdbc:mysql://mysql.krista.com:3306";
-        String userName = "root";
-        String password = "1q2w#E$R";
-
-        // 返回db给界面下拉
-        DbOperator dbOperator = new DbOperator(url, userName, password);
-        List<String> dbList = dbOperator.databases();
-        LOGGER.info(JsonUtil.toJson(dbList));
-
-        // 返回指定db的所有表给界面选择
-        String dbName = "adminCenter";
-        List<TableModel> tableModels = dbOperator.listTables(dbName);
-        LOGGER.info(JsonUtil.toJson(tableModels));
-
-        CodeGeneratorProperty codeGeneratorProperty = new CodeGeneratorProperty();
-        tableModels.forEach(tableModel -> {
-            if (StringUtils.isNotEmpty(tableModel.getComment())) {
-                codeGeneratorProperty.addTableComment(tableModel.getTableName(), tableModel.getComment());
-            }
-        });
+        mybatisGenerator();
+//        String url = "jdbc:mysql://mysql.krista.com:3306";
+//        String userName = "root";
+//        String password = "1q2w#E$R";
+//
+//        // 返回db给界面下拉
+//        DbOperator dbOperator = new DbOperator(url, userName, password);
+//        List<String> dbList = dbOperator.databases();
+//        LOGGER.info(JsonUtil.toJson(dbList));
+//
+//        // 返回指定db的所有表给界面选择
+//        String dbName = "adminCenter";
+//        List<TableModel> tableModels = dbOperator.listTables(dbName);
+//        LOGGER.info(JsonUtil.toJson(tableModels));
+//
+//        CodeGeneratorProperty codeGeneratorProperty = new CodeGeneratorProperty();
+//        tableModels.forEach(tableModel -> {
+//            if (StringUtils.isNotEmpty(tableModel.getComment())) {
+//                codeGeneratorProperty.addTableComment(tableModel.getTableName(), tableModel.getComment());
+//            }
+//        });
     }
 
     private static void test() {
