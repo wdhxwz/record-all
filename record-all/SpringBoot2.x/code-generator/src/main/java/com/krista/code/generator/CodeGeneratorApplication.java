@@ -91,38 +91,13 @@ public class CodeGeneratorApplication {
     }
 
     private static void mybatisGenerator() throws InvalidConfigurationException, InterruptedException, SQLException, IOException {
-        // ModelType : 定义如何生成实体类
-        // ModelType.FLAT:每张表生成一个实体类
-        Context context = new Context(ModelType.FLAT);
-        context.setId("test");
-
-        // 指定生成代码的运行环境
-        // 支持：MyBatis3(默认值)、MyBatis3Simple、Ibatis2Java2、Ibatis2Java5
-        context.setTargetRuntime("MyBatis3Simple");
-
-        // 1. 添加属性，property支持的属性有
-        // autoDelimitKeywords ==> 当表名或者字段名为SQL关键字的时候，设置该属性为true， MBG会自动给表名或字段名添加分隔符
-        // beginningDelimiter ==> 开始分隔符，默认值为双引号，Mysql中要改为反单引号(`)
-        // endingDelimiter ==> 结束分隔符，默认值为双引号，Mysql中要改为反单引号(`)
-        // javaFileEncoding ==> 设置要使用的Java文件的编码， 默认使用当前平台的编码
-        // javaFormatter ==> 格式化java代码
-        // xmlFormatter ==>  格式化xml代码
-        context.addProperty("beginningDelimiter", "`");
-        context.addProperty("endingDelimiter", "`");
+        Context context = getContext("test");
 
         // 2. 添加插件配置:用于扩展或修改通过MBG代码生成器生成的代码(一般不需要配置)
         /** context.addPluginConfiguration(null);**/
 
         // 3. 设置注释生成器：具体就是生成表或字段的备注信息
-        // org.mybatis.generator.api.CommentGenerator
-        // 有两个可配置属性：
-        // suppressAllComments:阻止生成注释， 默认为false
-        // suppressDate:阻止生成的注释包含时间戳， 默认为false
-        CommentGeneratorConfiguration commentGeneratorConfiguration = new CommentGeneratorConfiguration();
-        commentGeneratorConfiguration.addProperty("suppressDate", "true");
-        commentGeneratorConfiguration.addProperty("suppressAllComments", "false");
-        // 注释生成类
-        commentGeneratorConfiguration.setConfigurationType(KristaCommentGenerator.class.getName());
+        CommentGeneratorConfiguration commentGeneratorConfiguration = getCommentGeneratorConfiguration();
         context.setCommentGeneratorConfiguration(commentGeneratorConfiguration);
 
         // 4. 设置数据库连接
@@ -181,5 +156,43 @@ public class CodeGeneratorApplication {
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(configuration, callback, warnings);
         myBatisGenerator.generate(null);
         System.out.println(JsonUtil.toJson(warnings));
+    }
+
+    private static Context getContext(String contextId) {
+        // ModelType : 定义如何生成实体类
+        // ModelType.FLAT:每张表生成一个实体类
+        Context context = new Context(ModelType.FLAT);
+        context.setId(contextId);
+
+        // 指定生成代码的运行环境
+        // 支持：MyBatis3(默认值)、MyBatis3Simple、Ibatis2Java2、Ibatis2Java5
+        context.setTargetRuntime("MyBatis3Simple");
+
+        // 1. 添加属性，property支持的属性有
+        // autoDelimitKeywords ==> 当表名或者字段名为SQL关键字的时候，设置该属性为true， MBG会自动给表名或字段名添加分隔符
+        // beginningDelimiter ==> 开始分隔符，默认值为双引号，Mysql中要改为反单引号(`)
+        // endingDelimiter ==> 结束分隔符，默认值为双引号，Mysql中要改为反单引号(`)
+        // javaFileEncoding ==> 设置要使用的Java文件的编码， 默认使用当前平台的编码
+        // javaFormatter ==> 格式化java代码
+        // xmlFormatter ==>  格式化xml代码
+        context.addProperty("beginningDelimiter", "`");
+        context.addProperty("endingDelimiter", "`");
+
+        return context;
+    }
+
+    private static CommentGeneratorConfiguration getCommentGeneratorConfiguration() {
+        // 3. 设置注释生成器：具体就是生成表或字段的备注信息
+        // org.mybatis.generator.api.CommentGenerator
+        // 有两个可配置属性：
+        // suppressAllComments:阻止生成注释， 默认为false
+        // suppressDate:阻止生成的注释包含时间戳， 默认为false
+        CommentGeneratorConfiguration commentGeneratorConfiguration = new CommentGeneratorConfiguration();
+        commentGeneratorConfiguration.addProperty("suppressDate", "true");
+        commentGeneratorConfiguration.addProperty("suppressAllComments", "false");
+        // 注释生成类
+        commentGeneratorConfiguration.setConfigurationType(KristaCommentGenerator.class.getName());
+
+        return commentGeneratorConfiguration;
     }
 }
