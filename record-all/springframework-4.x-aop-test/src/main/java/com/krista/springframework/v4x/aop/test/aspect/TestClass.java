@@ -13,10 +13,16 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestClass {
-    @Test2
-    @Test
+    //    @Test2
+//    @Test
     @Test
     public void say() {
         System.out.println("hello");
+    }
+
+    @Test
+    public String say2(String name, Integer age) {
+
+        return "hello " + name;
     }
 }

@@ -39,6 +39,17 @@ public class TestAspect {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Method method = methodSignature.getMethod();
 
+        // 返回值(需要在around中)
+        Class<?> returnType = methodSignature.getReturnType();
+        LOGGER.info("returnType:{}", returnType);
+
+        // 参数名及参数值
+        Object[] args = joinPoint.getArgs();
+        String[] params = methodSignature.getParameterNames();
+        for (int index = 0; index < args.length; index++) {
+            LOGGER.info("{}:{}", params[index], args[index]);
+        }
+
         LOGGER.info(method.getName());
     }
 }

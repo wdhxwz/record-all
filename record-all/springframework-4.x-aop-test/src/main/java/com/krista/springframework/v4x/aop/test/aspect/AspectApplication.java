@@ -15,6 +15,7 @@ public class AspectApplication {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AspectConfiguration.class);
 
         TestClass testClass = applicationContext.getBean(TestClass.class);
-        testClass.say();
+        // testClass.say();
+        testClass.say2("krista", 18);
     }
 }
