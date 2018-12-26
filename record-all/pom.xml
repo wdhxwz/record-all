@@ -22,7 +22,6 @@
         <module>base-eureka-server</module>
         <module>SpringBoot2.x/springboot-with-view</module>
         <module>SpringBoot2.x/code-generator</module>
-        <module>MavenArchetype/test-archetype</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
