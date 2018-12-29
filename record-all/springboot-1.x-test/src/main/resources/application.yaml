@@ -63,6 +63,10 @@ swagger2:
 spring:
   http:
     log-request-details: true
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
   rabbitmq:
     host: rabbitmq.krista.com
     port: 5672
