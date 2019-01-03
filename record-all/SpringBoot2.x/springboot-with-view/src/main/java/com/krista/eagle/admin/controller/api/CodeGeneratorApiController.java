@@ -9,6 +9,8 @@ import com.krista.eagle.admin.model.dto.CodeGeneratorDto;
 import com.krista.eagle.admin.model.dto.CodeGeneratorStepOneDto;
 import com.krista.extend.base.response.JsonResponse;
 import com.krista.extend.utils.JsonUtil;
+import com.krista.extend.utils.ValidationUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,9 @@ public class CodeGeneratorApiController {
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(CodeGeneratorApiController.class);
 
+    /**
+     * 这个要放到session中
+     */
     @Autowired
     CodeGeneratorProperty codeGeneratorProperty;
 
@@ -58,7 +63,12 @@ public class CodeGeneratorApiController {
     @PostMapping(value = "step1")
     public JsonResponse<List<DropDownVo>> step1(@RequestBody CodeGeneratorStepOneDto param) {
         // 成功后，返回数据库列表
-        LOGGER.info("step 1 :{}", JsonUtil.toJson(param));
+        LOGGER.info("code generator step 1 :{}", JsonUtil.toJson(param));
+        String errorMsg = ValidationUtil.validate(param);
+        if (StringUtils.isNotEmpty(errorMsg)) {
+            LOGGER.warn("数据验证异常{}", errorMsg);
+            return new JsonResponse<>(500, "数据验证错误：" + errorMsg);
+        }
 
         codeGeneratorProperty.setDbType(param.getDbType());
         codeGeneratorProperty.setDbPort(param.getPort());
@@ -80,7 +90,6 @@ public class CodeGeneratorApiController {
             );
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
-
             return new JsonResponse<>(500, "数据库连接异常,请检查填写数据库信息");
         }
     }

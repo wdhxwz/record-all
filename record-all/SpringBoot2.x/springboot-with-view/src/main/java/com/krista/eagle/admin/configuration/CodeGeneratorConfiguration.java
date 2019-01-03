@@ -17,5 +17,4 @@ public class CodeGeneratorConfiguration {
     public CodeGeneratorProperty codeGeneratorProperty() {
         return new CodeGeneratorProperty();
     }
-
 }

@@ -27,7 +27,13 @@ public class DbOperator {
         dataSource.setUrl(url);
         dataSource.setUsername(userName);
         dataSource.setPassword(password);
+        // 不要异步创建数据库连接
+        dataSource.setCreateScheduler(null);
         dataSource.setAsyncInit(false);
+        // 只初始化一个连接
+        dataSource.setInitialSize(1);
+        // 连接创建失败时,创建连接的线程中断
+        dataSource.setBreakAfterAcquireFailure(true);
         dataSource.init();
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
@@ -48,6 +54,14 @@ public class DbOperator {
         return dbList;
     }
 
+    /**
+     * listTables 获取指定数据库下的表
+     *
+     * @param dbName 数据库名称
+     * @return java.util.List<com.krista.code.generator.model.TableModel>
+     * @author dw_wangdonghong
+     * @date 2019/1/3 15:45
+     */
     public List<TableModel> listTables(String dbName) {
         String sql = "SELECT table_name,table_comment FROM information_schema.tables WHERE table_schema=?";
 

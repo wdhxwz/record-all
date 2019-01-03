@@ -1,5 +1,7 @@
 package com.krista.eagle.admin.model.dto;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * CodeGeneratorStepOneDto
  *
@@ -8,10 +10,15 @@ package com.krista.eagle.admin.model.dto;
  * @since 2018/12/23 12:23
  */
 public class CodeGeneratorStepOneDto {
+    @NotNull
     private String dbType;
+    @NotNull
     private String host;
+    @NotNull
     private String port;
+    @NotNull
     private String userName;
+    @NotNull
     private String password;
 
     public String getDbType() {

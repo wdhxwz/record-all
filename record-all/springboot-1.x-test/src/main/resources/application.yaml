@@ -94,3 +94,5 @@ logging:
       hibernate: info
       hibernate.type.descriptor.sql.BasicBinder: trace
       hibernate.type.descriptor.sql.BasicExtractor: trace
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} -%-5level ----[%class:%line] - %msg%n"

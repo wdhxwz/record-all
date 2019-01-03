@@ -242,7 +242,14 @@
                 })
         },
         methods: {
+            init: function () {
+                this.dbList = [];
+                this.tableList = [];
+                this.selectedTableList = [];
+            },
+            // 下一步
             nextStep: function () {
+                this.init();
                 var self = this;
                 if (!this.checkParam()) {
                     return false;
@@ -254,10 +261,15 @@
                     userName: self.userName,
                     password: self.password
                 }).then(function (response) {
-                    self.dbList = response.data.data;
+                    if (response.data.code === 500) {
+                        toastr.warning(response.data.message);
+                    } else {
+                        self.dbList = response.data.data;
+                    }
                 }).catch(function (error) {
                 })
             },
+            // 下一步：确定参数
             checkParam: function () {
                 toastr.clear();
                 if ($.trim(this.host) === "") {
@@ -279,6 +291,7 @@
 
                 return true;
             },
+            // 数据库选择后确定
             dbSelect: function () {
                 toastr.clear();
                 var self = this;
@@ -301,12 +314,14 @@
                     }).catch(function (error) {
                 });
             },
+            // Transfer组件相关事件
             handleChange1: function (newTargetKeys, direction, moveKeys) {
                 this.selectedTableList = newTargetKeys;
             },
             render: function (item) {
                 return item.label;
             },
+            // 确定生成代码：弹窗确认
             generate: function () {
                 toastr.clear();
                 if ($.trim(this.basePackage) === "") {
@@ -319,9 +334,11 @@
                 }
                 this.modal = true;
             },
+            // 弹窗--取消
             cancel: function () {
                 this.modal = false;
             },
+            // 弹窗--确定
             ok: function () {
                 var self = this;
                 axios.post("/codegenerator/generate", {
