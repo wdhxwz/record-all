@@ -32,6 +32,8 @@
     <script src="libs/AdminLTE/dist/js/adminlte.min.js"></script>
     <script src="libs/Vue/dist/vue.min.js"></script>
     <script src="libs/others/axios.min.js"></script>
+    <script src="libs/vue-router/vue-router.min.js"></script>
+    <script src="libs/others/httpVueLoader.js"></script>
 
     <!-- 自定义样式与js -->
     <link rel="stylesheet" href="css/gview.css">
@@ -84,7 +86,8 @@
         <!-- 内容区域 -->
         <div class="content-wrapper">
             <div class="gview-iframe-wrapper">
-                <iframe class="gview-iframe" :src="iframeSrc"></iframe>
+                <!-- <iframe class="gview-iframe" :src="iframeSrc"></iframe>-->
+                <router-view></router-view>
             </div>
         </div>
 
@@ -95,9 +98,18 @@
 
 <script src="script/menuList.js"></script>
 <script src="script/components/sidebar-menu.js"></script>
+<script src="script/components/test.js"></script>
 
 <script>
-    var app = new Vue({
+    const test2 = {template: '<div>foo2</div>'};
+    const routes = [
+        {path: '/test', component: httpVueLoader("view/test.vue")},
+        {path: '/test2', component: test2}
+    ];
+    const router = new VueRouter({
+        routes:routes
+    });
+    new Vue({
         el: '#app',
         data: {
             menus: [],
@@ -119,7 +131,8 @@
             logout: function () {
                 console.log("logout...")
             }
-        }
+        },
+        router: router
     });
 </script>
 </body>

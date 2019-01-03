@@ -1,11 +1,10 @@
 (function ($, Vue, axios) {
     'use strict';
     // 注册Vue组件
-    Vue.component("test-a", function (resolve) {
-        axios.get("tpls/test.html", {
+    Vue.component("test", function (resolve) {
+        axios.get("test.html", {
             accept: 'text/html, text/plain'
         }).then(function (data) {
-            console.log(data.data);
             resolve({
                 template: data.data
             })
