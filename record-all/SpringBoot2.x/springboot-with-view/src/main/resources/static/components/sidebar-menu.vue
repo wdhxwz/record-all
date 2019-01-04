@@ -1,32 +1,20 @@
 <template>
     <ul class="sidebar-menu" data-widget="tree">
         <li v-for="menu in menus"
-            :key="menu.menuId"
-            :class="{active:menu.open,treeview:menu.list && menu.list.length > 0}">
-            <a :href="getValue(menu.url,'','#')">
-                <i :class="getValue(menu.icon,'fa fa-','fa fa-circle-o')"></i>
+            :key="menu.id"
+            :class="{treeview:menu.children && menu.children.length > 0}">
+            <router-link :to="menu.path">
+                <menu-icon :icon-name="menu.icon"></menu-icon>
                 <span>{{ menu.name }}</span>
-                <span v-if="menu.list && menu.list.length > 0" class="pull-right-container">
+                <span v-if="menu.children && menu.children.length > 0" class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                 </span>
-            </a>
-            <ul class="treeview-menu" v-if="menu.list && menu.list.length > 0">
-                <li v-for="submenu in menu.list">
-                    <a :href="getValue(submenu.url,'','#')">
-                        <menu-icon icon-name="fa fa-share"></menu-icon>
+            </router-link>
+            <ul class="treeview-menu" v-if="menu.children && menu.children.length > 0">
+                <li v-for="submenu in menu.children">
+                    <router-link :to="submenu.path">
+                        <menu-icon :icon-name="submenu.icon"></menu-icon>
                         {{ submenu.name }}
-                    </a>
-                </li>
-                <li>
-                    <router-link to="/test">
-                        <i class="fa fa-circle-o"></i>
-                        首页
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/test2">
-                        <i class="fa fa-circle-o"></i>
-                        首页2
                     </router-link>
                 </li>
             </ul>

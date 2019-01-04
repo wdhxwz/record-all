@@ -11,7 +11,7 @@
         });
 
         function vueOpts(htmlTpl) {
-            var options = {
+            let options = {
                 template: htmlTpl
             };
 

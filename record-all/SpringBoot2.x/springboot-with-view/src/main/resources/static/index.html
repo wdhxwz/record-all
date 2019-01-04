@@ -38,6 +38,9 @@
     <!-- 自定义样式与js -->
     <link rel="stylesheet" href="css/gview.css">
     <script src="script/config.js"></script>
+    <script src="script/global.js"></script>
+    <script src="script/router.js"></script>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div id="app" v-cloak>
@@ -96,35 +99,34 @@
     <!-- ./wrapper -->
 </div>
 
-<script src="script/menuList.js"></script>
-<script src="script/global.js"></script>
-
 <script>
-    const test2 = {template: '<div>foo2</div>'};
-    const routes = [
-        {path: '/test', component: httpVueLoader("view/test.vue")},
-        {path: '/test2', component: test2}
-    ];
-    const router = new VueRouter({
-        routes: routes
-    });
+    // 设置为开发模式
     Vue.config.devtools = true;
     new Vue({
         el: '#app',
         data: {
             menus: [],
-            iframeSrc: "",
             userName: "",
             productName: ""
         },
         created: function () {
-            this.menus = menuList;
+            let self = this;
+            axios.get("/menu/listMenu")
+                .then(function (response) {
+                    let data = response.data;
+                    if (data && data.code === 200 && data.data) {
+                        self.menus = data.data;
+                    } else {
+                        self.menus = [];
+                    }
+                }).catch(function (error) {
+                console.log(error);
+            });
             this.userName = localStorage.getItem(config.userNameKey);
             this.productName = localStorage.getItem(config.projectNameKey);
         },
         mounted: function () {
-            this.menus = menuList;
-            this.iframeSrc = "test.html";
+
         },
         methods: {
             // 退出事件

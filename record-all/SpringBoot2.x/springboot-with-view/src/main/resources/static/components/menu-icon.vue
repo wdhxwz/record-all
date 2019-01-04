@@ -18,7 +18,6 @@
         },
         computed: {
             getClassName: function () {
-                console.log(this.iconName);
                 if (this.iconName === undefined || this.iconName === "") {
                     return this.defaultName;
                 }
