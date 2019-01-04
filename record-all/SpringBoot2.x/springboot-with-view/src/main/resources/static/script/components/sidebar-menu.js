@@ -1,6 +1,7 @@
 (function ($, Vue, axios) {
     'use strict';
     // 注册Vue组件
+    httpVueLoader.register(Vue,"../../components/menu-icon.vue");
     Vue.component("sidebar-menu", function (resolve) {
         axios.get("tpls/sidebar-menu.html", {
             accept: 'text/html, text/plain'

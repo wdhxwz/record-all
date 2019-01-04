@@ -14,7 +14,8 @@
             <li v-for="submenu in menu.list">
                 <!--:href="getValue(submenu.url,'','#')"-->
                 <a :href="getValue(submenu.url,'','#')">
-                    <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>
+                   <!-- <i :class="getValue(submenu.icon,'fa fa-','fa fa-circle-o')"></i>-->
+                    <menu-icon iconName="fa fa-share"></menu-icon>
                     {{ submenu.name }}
                 </a>
             </li>
