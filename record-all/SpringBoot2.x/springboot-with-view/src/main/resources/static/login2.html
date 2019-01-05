@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="libs/AdminLTE/dist/css/AdminLTE.min.css">
+  <!--  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+
     <script src="libs/Vue/dist/vue.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -17,66 +19,25 @@
     <link rel="stylesheet" href="libs/others/toastr.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <link rel="stylesheet" href="css/login.css">
+   <!-- <link rel="stylesheet" href="css/login.css">-->
 
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="libs/others/md5.min.js"></script>
     <script src="libs/others/axios.min.js"></script>
     <script src="libs/others/toastr.min.js"></script>
+    <script src="libs/others/httpVueLoader.js"></script>
+<!--    <script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
 </head>
-<body class="hold-transition login-page">
-    <div class="login-box" id="app">
-        <div class="login-logo">
-            <a><b>{{productName}}</b></a>
-        </div>
-        <!-- /.login-logo -->
-        <div class="login-box-body">
-            <p class="login-box-msg">登录以开启旅程</p>
-            <!--<form>-->
-            <div class="form-group has-feedback">
-                <input v-model="userName" type="text" class="form-control" placeholder="登录账号">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input v-model="password" type="password" class="form-control" placeholder="登录密码">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="form-group has-feedback">
-                        <input v-model="imgCode" type="text" class="form-control" placeholder="验证码">
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <img :src="imgSrc" v-on:click="refreshCaptcha"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" v-model="rememberMe">记住我
-                        </label>
-                    </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-xs-4">
-                    <button v-on:click="login"
-                            class="btn btn-success btn-block btn-flat">登录
-                    </button>
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- </form>-->
-            <a href="forgetPassword.html">忘记密码</a><br>
-        </div>
-        <!-- /.login-box-body -->
-    </div>
+<body class="hold-transition login-page" style="height: auto;">
+<div class="login-box" id="app">
+    <login></login>
+</div>
 <!-- /.login-box -->
 </body>
 <script src="script/config.js"></script>
 <script>
+    httpVueLoader.register(Vue, "components/login.vue");
     let app = new Vue({
         el: '#app',
         data: {
