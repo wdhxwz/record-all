@@ -11,5 +11,9 @@ router.beforeEach((to, from, next) => {
     console.log(to);
     console.log(from);
     console.log(next);
-    next();
-})
+    /*let token = "";
+    if (!token || !/\S/.test(token)) {
+        window.location = "login.html";
+    }*/
+    next()
+});
