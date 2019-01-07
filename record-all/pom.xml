@@ -23,6 +23,7 @@
         <module>SpringBoot2.x/springboot-with-view</module>
         <module>SpringBoot2.x/code-generator</module>
         <module>SpringBoot2.x/springboot-message</module>
+        <module>alibaba/nacos-config-client</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
