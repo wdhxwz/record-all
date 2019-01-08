@@ -29,7 +29,7 @@ public class LongPollingAsyncServlet extends HttpServlet {
      * logger
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(LongPollingAsyncServlet.class);
-    private static ExecutorService executor = ThreadPoolUtil.newSingleThreadExecutor("longPolling-%d");
+    public static ExecutorService executor = ThreadPoolUtil.newSingleThreadExecutor("longPolling-%d");
     private final AtomicLong sequence = new AtomicLong();
 
     @Override
