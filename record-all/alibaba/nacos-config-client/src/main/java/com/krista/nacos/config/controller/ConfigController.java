@@ -1,4 +1,4 @@
-package com.krista.nacos.cofig.controller;
+package com.krista.nacos.config.controller;
 
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
