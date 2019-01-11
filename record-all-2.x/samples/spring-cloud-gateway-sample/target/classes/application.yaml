@@ -1,0 +1,14 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      routes:
+      - id: host_route
+        uri: http://www.baidu.com
+        predicates:
+        - Path=/baidu/**
+        filters:
+        - StripPrefix=1
+server:
+  port: 7070

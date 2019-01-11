@@ -4,7 +4,21 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * PostProcessorApplication
+ * PostProcessorApplication：
+ * <p>
+ *     ApplicationContextAwareProcessor设置Aware相关接口
+ *     CommonAnnotationBeanPostProcessor
+ *     AutowiredAnnotationBeanPostProcessor
+ *     RequiredAnnotationBeanPostProcessor
+ *     PersistenceAnnotationBeanPostProcessor
+ *     AbstractAutoProxyCreator
+ *     BeanValidationPostProcessor
+ *     MethodValidationPostProcessor
+ *     ScheduledAnnotationBeanPostProcessor
+ *     AsyncAnnotationBeanPostProcessor
+ *     ServletContextAwareProcessor
+ *     https://jinnianshilongnian.iteye.com/blog/1492424
+ * </p>
  * <p>
  * ApplicationContext Bean生命周期(初始化)
  * 1)BeanFactoryPostProcessor.postProcessBeanFactory(未实例化前,可以修改BeanFactory中的BeanDefination)
