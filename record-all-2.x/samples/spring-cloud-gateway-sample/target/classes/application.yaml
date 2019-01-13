@@ -1,6 +1,4 @@
 spring:
-  main:
-    allow-bean-definition-overriding: true
   cloud:
     gateway:
       routes:
@@ -8,7 +6,14 @@ spring:
         uri: http://www.baidu.com
         predicates:
         - Path=/baidu/**
+        - RemoteAddr=192.168.1.1/24
         filters:
         - StripPrefix=1
 server:
   port: 7070
+# 启动监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info","gateway"]
