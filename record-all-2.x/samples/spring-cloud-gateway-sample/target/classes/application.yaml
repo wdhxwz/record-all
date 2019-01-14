@@ -6,7 +6,7 @@ spring:
         uri: http://www.baidu.com
         predicates:
         - Path=/baidu/**
-        - RemoteAddr=192.168.1.1/24
+        # - RemoteAddr=192.168.1.1/24
         filters:
         - StripPrefix=1
 server:

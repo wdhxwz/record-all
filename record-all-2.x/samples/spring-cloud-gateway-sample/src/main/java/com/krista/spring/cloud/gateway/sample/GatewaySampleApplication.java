@@ -1,5 +1,6 @@
 package com.krista.spring.cloud.gateway.sample;
 
+import com.krista.spring.cloud.gateway.sample.configuration.RouteConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -20,7 +21,10 @@ public class GatewaySampleApplication {
     }
 
     @Bean
-    public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-        return builder.routes().build();
+    public RouteLocator myRoutes(RouteLocatorBuilder builder, RouteConfiguration routeConfiguration) {
+        RouteLocator routeLocator = builder.routes().build();
+        routeConfiguration.save();
+
+        return routeLocator;
     }
 }
