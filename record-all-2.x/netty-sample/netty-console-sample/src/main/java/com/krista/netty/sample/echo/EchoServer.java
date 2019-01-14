@@ -37,7 +37,7 @@ public class EchoServer {
     }
 
     public void start() throws Exception {
-        // 创建 EventLoopGroup
+        // 创建 EventLoopGroup(不指定线程数时，默认是核数*2)
         NioEventLoopGroup group = new NioEventLoopGroup();
         try {
             // 创建 ServerBootstrap
