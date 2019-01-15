@@ -10,6 +10,7 @@
         <module>samples/spring-cloud-gateway-sample</module>
         <module>spring5-samples/spring-webflux-sample</module>
         <module>netty-sample/netty-console-sample</module>
+        <module>libs-samples/httpclients-sample</module>
     </modules>
     <packaging>pom</packaging>
 

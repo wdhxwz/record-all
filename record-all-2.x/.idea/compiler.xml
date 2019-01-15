@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="httpclients-sample" />
         <module name="netty-console-sample" />
         <module name="spring-cloud-gateway-sample" />
         <module name="spring-webflux-sample" />
