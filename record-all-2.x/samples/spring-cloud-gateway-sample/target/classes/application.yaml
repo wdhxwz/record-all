@@ -9,6 +9,17 @@ spring:
         # - RemoteAddr=192.168.1.1/24
         filters:
         - StripPrefix=1
+      - id: test
+        uri: http://127.0.0.1:7071
+        predicates:
+        - Path=/a/**
+        filters:
+        - StripPrefix=1
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenishRate: 1
+            redis-rate-limiter.burstCapacity: 2
+            key-resolver: "#{@pathKeyResolver}"
 server:
   port: 7070
 # 启动监控端点

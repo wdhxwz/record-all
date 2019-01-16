@@ -11,6 +11,7 @@
         <module>spring5-samples/spring-webflux-sample</module>
         <module>netty-sample/netty-console-sample</module>
         <module>libs-samples/httpclients-sample</module>
+        <module>samples/spring-cloud-nacos-sample</module>
     </modules>
     <packaging>pom</packaging>
 
