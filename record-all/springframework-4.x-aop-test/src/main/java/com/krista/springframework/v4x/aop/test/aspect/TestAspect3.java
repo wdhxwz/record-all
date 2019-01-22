@@ -40,5 +40,6 @@ public class TestAspect3 {
         Method method = methodSignature.getMethod();
 
         LOGGER.info(method.getName() + "test2");
+        LOGGER.info(methodSignature.toShortString());
     }
 }

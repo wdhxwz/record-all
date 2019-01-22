@@ -51,5 +51,6 @@ public class TestAspect {
         }
 
         LOGGER.info(method.getName());
+        LOGGER.info(methodSignature.toShortString());
     }
 }
