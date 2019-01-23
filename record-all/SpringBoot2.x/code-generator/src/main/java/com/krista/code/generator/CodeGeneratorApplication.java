@@ -1,10 +1,9 @@
 package com.krista.code.generator;
 
-import com.krista.code.generator.configuration.CodeGeneratorProperty;
+import com.google.common.base.CaseFormat;
 import com.krista.code.generator.configuration.KristaCommentGenerator;
-import com.krista.code.generator.dao.DbOperator;
-import com.krista.code.generator.model.TableModel;
 import com.krista.extend.utils.JsonUtil;
+import freemarker.template.TemplateExceptionHandler;
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.*;
@@ -12,12 +11,16 @@ import org.mybatis.generator.exception.InvalidConfigurationException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tk.mybatis.mapper.generator.MapperPlugin;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * CodeGeneratorApplication
@@ -31,10 +34,13 @@ public class CodeGeneratorApplication {
      * logger
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(CodeGeneratorApplication.class);
+    private static final String MODULE_PATH = "SpringBoot2.x/code-generator";
+    private static final String PROJECT_PATH = System.getProperty("user.dir") + File.separator + MODULE_PATH;
+    private static final String TEMPLATE_FILE_PATH = PROJECT_PATH + "/src/main/resources/template";
 
     public static void main(String[] args) throws InterruptedException, SQLException, InvalidConfigurationException, IOException {
         // test();
-        mybatisGenerator();
+
 //        String url = "jdbc:mysql://mysql.krista.com:3306";
 //        String userName = "root";
 //        String password = "1q2w#E$R";
@@ -55,6 +61,13 @@ public class CodeGeneratorApplication {
 //                codeGeneratorProperty.addTableComment(tableModel.getTableName(), tableModel.getComment());
 //            }
 //        });
+
+        for (String tableName : Constants.tables) {
+            if (StringUtils.isNotEmpty(tableName)) {
+                mybatisGenerator(tableName);
+                genService(tableName, "");
+            }
+        }
     }
 
     private static void test() {
@@ -90,11 +103,15 @@ public class CodeGeneratorApplication {
         }
     }
 
-    private static void mybatisGenerator() throws InvalidConfigurationException, InterruptedException, SQLException, IOException {
-        Context context = getContext("test");
+    private static void mybatisGenerator(String tableName) throws InvalidConfigurationException, InterruptedException, SQLException, IOException {
+        Context context = getContext(Constants.contextId);
 
         // 2. 添加插件配置:用于扩展或修改通过MBG代码生成器生成的代码(一般不需要配置)
-        /** context.addPluginConfiguration(null);**/
+        // 用于集成通用mapper
+        PluginConfiguration pluginConfiguration = new PluginConfiguration();
+        pluginConfiguration.setConfigurationType(MapperPlugin.class.getName());
+        pluginConfiguration.addProperty("mappers", Constants.myMapper);
+        context.addPluginConfiguration(pluginConfiguration);
 
         // 3. 设置注释生成器：具体就是生成表或字段的备注信息
         CommentGeneratorConfiguration commentGeneratorConfiguration = getCommentGeneratorConfiguration();
@@ -102,10 +119,10 @@ public class CodeGeneratorApplication {
 
         // 4. 设置数据库连接
         JDBCConnectionConfiguration jdbcConnectionConfiguration = new JDBCConnectionConfiguration();
-        jdbcConnectionConfiguration.setDriverClass("com.mysql.jdbc.Driver");
-        jdbcConnectionConfiguration.setConnectionURL("jdbc:mysql://localhost:3306/pushsystem");
-        jdbcConnectionConfiguration.setPassword("123456");
-        jdbcConnectionConfiguration.setUserId("root");
+        jdbcConnectionConfiguration.setDriverClass(Constants.driverClass);
+        jdbcConnectionConfiguration.setConnectionURL(Constants.connectUrl);
+        jdbcConnectionConfiguration.setPassword(Constants.dbPassword);
+        jdbcConnectionConfiguration.setUserId(Constants.dbUser);
         context.setJdbcConnectionConfiguration(jdbcConnectionConfiguration);
 
         // 5. 设置JDBC Type 与Java Type之间的映射解析器
@@ -116,8 +133,8 @@ public class CodeGeneratorApplication {
         // targetPackage:生成实体类存放的包名， 一般就是放在该包下
         // targetProject:指定目标项目路径， 使用的是文件系统的绝对路径
         JavaModelGeneratorConfiguration javaModelGeneratorConfiguration = new JavaModelGeneratorConfiguration();
-        javaModelGeneratorConfiguration.setTargetPackage("com.krista.test.model");
-        String dir = "C:\\Users\\Administrator\\Desktop\\test\\" + System.currentTimeMillis();
+        javaModelGeneratorConfiguration.setTargetPackage(Constants.basePackage + Constants.flag + Constants.modelPackage);
+        String dir = Constants.saveDir;
         File file = new File(dir);
         file.mkdir();
         javaModelGeneratorConfiguration.setTargetProject(dir);
@@ -125,7 +142,7 @@ public class CodeGeneratorApplication {
 
         // 7. map.xml相关配置
         SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = new SqlMapGeneratorConfiguration();
-        sqlMapGeneratorConfiguration.setTargetPackage("com.krista.test.xml");
+        sqlMapGeneratorConfiguration.setTargetPackage(Constants.basePackage + Constants.flag + Constants.xmlPackage);
         sqlMapGeneratorConfiguration.setTargetProject(dir);
         context.setSqlMapGeneratorConfiguration(sqlMapGeneratorConfiguration);
 
@@ -134,14 +151,14 @@ public class CodeGeneratorApplication {
         //  ANNOTATEDMAPPER:基于注解的Mapper接口， 不会有对应的XML映射文件
         //  XMLMAPPER:所有的方法都在XML中， 接口调用依赖XML文件。
         JavaClientGeneratorConfiguration javaClientGeneratorConfiguration = new JavaClientGeneratorConfiguration();
-        javaClientGeneratorConfiguration.setTargetPackage("com.krista.test.dao");
+        javaClientGeneratorConfiguration.setTargetPackage(Constants.basePackage + Constants.flag + Constants.mapperPackage);
         javaClientGeneratorConfiguration.setTargetProject(dir);
         javaClientGeneratorConfiguration.setConfigurationType("XMLMAPPER");
         context.setJavaClientGeneratorConfiguration(javaClientGeneratorConfiguration);
 
         // 表配置
         TableConfiguration tableConfiguration = new TableConfiguration(context);
-        tableConfiguration.setTableName("push_app");
+        tableConfiguration.setTableName(tableName);
         context.addTableConfiguration(tableConfiguration);
 
         // 相关配置
@@ -194,5 +211,61 @@ public class CodeGeneratorApplication {
         commentGeneratorConfiguration.setConfigurationType(KristaCommentGenerator.class.getName());
 
         return commentGeneratorConfiguration;
+    }
+
+    private static void genService(String tableName, String modelName) {
+        try {
+            freemarker.template.Configuration cfg = getConfiguration();
+
+            Map<String, Object> data = new HashMap<>();
+            data.put("date", Constants.date);
+            data.put("author", Constants.author);
+            String modelNameUpperCamel = StringUtils.isEmpty(modelName) ? tableNameConvertUpperCamel(tableName) : modelName;
+            data.put("modelNameUpperCamel", modelNameUpperCamel);
+            data.put("modelNameLowerCamel", tableNameConvertLowerCamel(tableName));
+            data.put("basePackage", Constants.basePackage);
+
+            File file = new File(Constants.saveDir + File.separator +
+                    packageConvertPath(Constants.basePackage + Constants.flag + Constants.servicePackage) +
+                    File.separator + modelNameUpperCamel + "Service.java");
+            if (!file.getParentFile().exists()) {
+                file.getParentFile().mkdirs();
+            }
+            cfg.getTemplate("service.ftl").process(data,
+                    new FileWriter(file));
+            LOGGER.info(modelNameUpperCamel + "Service.java 生成成功");
+
+            File file1 = new File(Constants.saveDir + File.separator +
+                    packageConvertPath(Constants.basePackage + Constants.flag + Constants.serviceImplPackage)
+                    + File.separator + modelNameUpperCamel + "ServiceImpl.java");
+            if (!file1.getParentFile().exists()) {
+                file1.getParentFile().mkdirs();
+            }
+            cfg.getTemplate("service-impl.ftl").process(data,
+                    new FileWriter(file1));
+            LOGGER.info(modelNameUpperCamel + "ServiceImpl.java 生成成功");
+        } catch (Exception e) {
+            throw new RuntimeException("生成Service失败", e);
+        }
+    }
+
+    private static freemarker.template.Configuration getConfiguration() throws IOException {
+        freemarker.template.Configuration cfg = new freemarker.template.Configuration(freemarker.template.Configuration.VERSION_2_3_23);
+        cfg.setDirectoryForTemplateLoading(new File(TEMPLATE_FILE_PATH));
+        cfg.setDefaultEncoding("UTF-8");
+        cfg.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
+        return cfg;
+    }
+
+    private static String tableNameConvertUpperCamel(String tableName) {
+        return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, tableName.toLowerCase());
+    }
+
+    private static String tableNameConvertLowerCamel(String tableName) {
+        return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, tableName.toLowerCase());
+    }
+
+    private static String packageConvertPath(String packageName) {
+        return String.format("/%s/", packageName.contains(".") ? packageName.replaceAll("\\.", "/") : packageName);
     }
 }
