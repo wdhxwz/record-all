@@ -26,11 +26,13 @@ public class Constants {
     static String connectUrl = "jdbc:mysql://mysql.krista.com:3306/wetech_admin";
     static String dbPassword = "1q2w#E$R";
     static String dbUser = "root";
-    public static List<String> tables = Arrays.asList(
-            "c_file", "c_file_relation", "d_doctor", "d_doctor_patient",
-            "p_assay_list", "p_diet_log", "p_evaluation", "p_food_prefer",
-            "p_medical_history", "p_nutrition_report", "p_nutrition_service", "p_patient"
-    );
+//    public static List<String> tables = Arrays.asList(
+//            "c_file", "c_file_relation", "d_doctor", "d_doctor_patient",
+//            "p_assay_list", "p_diet_log", "p_evaluation", "p_food_prefer",
+//            "p_medical_history", "p_nutrition_report", "p_nutrition_service", "p_patient"
+//    );
+
+    public static List<String> tables = Arrays.asList("c_banner");
 
     /**
      * 程序相关配置

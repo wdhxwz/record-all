@@ -9,6 +9,7 @@
         <module name="httpclients-sample" />
         <module name="netty-console-sample" />
         <module name="spring-cloud-gateway-sample" />
+        <module name="spring-cloud-nacos-sample" />
         <module name="spring-webflux-sample" />
       </profile>
     </annotationProcessing>
