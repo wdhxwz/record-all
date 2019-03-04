@@ -2,8 +2,636 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b850a32d-0b4b-4dfd-a131-6478e1fd39b9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../record-all/SpringBoot2.x/code-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../record-all/SpringBoot2.x/code-generator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../record-all/SpringBoot2.x/code-generator/src/main/java/com/krista/code/generator/CodeGeneratorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../record-all/SpringBoot2.x/code-generator/src/main/java/com/krista/code/generator/CodeGeneratorApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/HighChartsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/configs/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/framework.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/annotations/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/annotations/popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/highcharts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/highcharts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/stocktools/gui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/stocktools/gui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/dark-unica.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/dark-unica.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/grid-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/grid-light.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/sand-signika.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/css/themes/sand-signika.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/ControlPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/MockPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/ControllableCircle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/ControllableImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/ControllableLabel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/ControllablePath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/ControllableRect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/controllableMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/controllable/markerMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/eventEmitterMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/navigationBindings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/CrookedLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/ElliottWave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/Fibonacci.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/InfinityLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/Measure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/Pitchfork.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/Tunnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/annotations/types/VerticalLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/error-messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/highcharts-3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/highcharts-more.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/highcharts.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/accessibility.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/annotations-advanced.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/arrow-symbols.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/boost.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/current-date-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/datagrouping.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/gantt.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/grid-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/heatmap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/histogram-bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/pathfinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/sonification.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/stock-tools.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/stock.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/treegrid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/avocado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/avocado.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/dark-blue.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/dark-green.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/dark-unica.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/gray.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/grid-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/grid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/sand-signika.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/skies.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/sunset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/masters/themes/sunset.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/centered-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/derived-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/download-url.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/draw-point.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/geometry-circles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/geometry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/indicator-required.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/multipe-lines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/nodes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/on-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/polygon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/reduce-array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/mixins/tree-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/a11y-i18n.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/annotations-legacy.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/boost.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/histogram.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/keyboard-navigation.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/networkgraph/QuadTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/networkgraph/layouts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/networkgraph/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/screen-reader.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/Earcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/Instrument.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/Timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/chartSonify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/instrumentDefinitions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/musicalFrequencies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/pointSonify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/sonification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sonification/utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/stock-tools-bindings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/stock-tools-gui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Math.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/SVGRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Scatter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/Series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-3d/VMLRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/ArrowSymbols.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/CurrentDateIndicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/GanttChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/GanttSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/GridAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/Pathfinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/PathfinderAlgorithms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/Tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-gantt/TreeGrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/ColorAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/ColorSeriesMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/GeoJSON.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/HeatmapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/Map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapBubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapLineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapPointSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-map/MapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/AreaRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/AreaSplineRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/BoxPlotSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/BubbleLegend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/BubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/ColumnPyramidSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/ColumnRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/ErrorBarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/GaugeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/PackedBubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/Pane.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/Polar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/PolygonSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/RadialAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts-more/WaterfallSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/AreaSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/AreaSplineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/BarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/CandlestickSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/ColumnSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/DataGrouping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/DataLabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/DateTimeAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Dynamics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/FlagsSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Globals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Interaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/LogarithmicAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/MSPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Navigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/OHLCSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/OrdinalAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/PieSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/PlotBandSeries.experimental.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/PlotLineOrBand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Point.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Pointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/RangeSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/ScatterSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/ScrollablePlotArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/SplineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Stacking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/StockChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/SvgRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Tick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/TouchPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/parts/Utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/avocado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/dark-green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/dark-unica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/grid-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/sand-signika.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/skies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/es-modules/themes/sunset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts-3d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts-3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts-more.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts-more.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/highcharts.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/canvg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/canvg.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/jspdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/jspdf.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/rgbcolor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/rgbcolor.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/svg2pdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/lib/svg2pdf.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/accessibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/accessibility.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/annotations-advanced.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/annotations-advanced.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/annotations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/arrow-symbols.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/arrow-symbols.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/boost-canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/boost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/boost.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/broken-axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/bullet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/current-date-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/current-date-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/cylinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/datagrouping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/datagrouping.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/debugger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/dependency-wheel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/drag-panes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/draggable-points.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/drilldown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/export-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/full-screen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/funnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/gantt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/gantt.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/grid-axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/grid-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/heatmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/heatmap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/histogram-bellcurve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/histogram-bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/item-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/networkgraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/no-data-to-display.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/offline-exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/oldie-polyfills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/oldie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/overlapping-datalabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/parallel-coordinates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pareto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pathfinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pathfinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pattern-fill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/price-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sankey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/series-label.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/solid-gauge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sonification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sonification.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/static-scale.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/stock-tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/stock-tools.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/stock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/stock.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/streamgraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sunburst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/tilemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/treegrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/treegrid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/treemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/variable-pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/variwide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/vector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/venn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/windbarb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/wordcloud.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/xrange.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/avocado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/avocado.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-blue.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-green.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-unica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/dark-unica.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/gray.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/grid-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/grid-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/grid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/sand-signika.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/sand-signika.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/skies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/skies.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/sunset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/code/themes/sunset.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-column-interactive/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-column-null-values/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-column-stacking-grouping/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-pie-donut/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/3d-scatter-draggable/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/accessible-line/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/accessible-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/advanced-accessible/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/annotations/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-inverted/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-missing/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-negative/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-stacked-percent/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/area-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/arearange-line/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/arearange/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/areaspline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bar-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bar-negative-stack/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bar-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bellcurve/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/box-plot/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bubble-3d/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bubble/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/bullet-graph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/chart-update/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-drilldown/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-negative/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-parsed/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-placement/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-pyramid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-rotated-labels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-stacked-and-grouped/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-stacked-percent/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/column-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/columnrange/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo-dual-axes/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo-meteogram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo-multi-axes/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo-regression/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo-timeline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/combo/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/cylinder/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/dynamic-click-to-add/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/dynamic-master-detail/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/dynamic-update/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/error-bar/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/euler-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/funnel/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-activity/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-clock/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-dual/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-solid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-speedometer/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/gauge-vu-meter/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/heatmap-canvas/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/heatmap/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/histogram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/honeycomb-usa/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-ajax/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-boost/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-labels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-log-axis/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/line-time-series/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/live-data/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/network-graph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/packed-bubble/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/parallel-coordinates/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pareto/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-donut/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-drilldown/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-gradient/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-legend/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-monochrome/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pie-semi-circle/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/polar-spider/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/polar-wind-rose/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/polar/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/polygon/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/pyramid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/renderer/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/responsive/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/sankey-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/scatter-boost/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/scatter/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/sonification/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/sparkline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/spline-inverted/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/spline-irregular-time/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/spline-plot-bands/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/spline-symbols/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/streamgraph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/styled-mode-column/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/styled-mode-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/sunburst/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/synchronized-charts/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/treemap-coloraxis/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/treemap-large-dataset/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/treemap-with-levels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/variable-radius-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/variwide/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/vector-plot/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/venn-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/waterfall/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/windbarb-series/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/wordcloud/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/examples/x-range/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/annotations-hidden.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/annotations-visible.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-ray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow-segment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/crooked-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/crooked-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/current-price-hide.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/current-price-show.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/destroy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/elliott-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/elliott-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/fibonacci.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/flag-basic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/flag-diamond.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/flag-elipse.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/flag-trapeze.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/horizontal-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/indicators.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/label.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/measure-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/measure-xy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/measure-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/parallel-channel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/pitchfork.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/ray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/remove-annotations.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/save-chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/segment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/separator.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/series-candlestick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/series-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/series-ohlc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/text.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/vertical-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/vertical-counter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/vertical-double-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/vertical-label.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/vertical-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/zoom-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/zoom-xy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/zoom-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/vml-radial-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/color-picker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/cursor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/earth.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/feature.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-circlepin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-diamondpin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag-squarepin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/rect.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/reset.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/save-chart-cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/save.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/skies.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/graphics/sun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/license.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/readme.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/使用说明.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/views/echarts-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../record-all/java-test/src/main/java/com/krista/java/test/basic/DateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -12,12 +640,16 @@
     <ignored path="$PROJECT_DIR$/netty-sample/netty-console-sample/target/" />
     <ignored path="$PROJECT_DIR$/libs-samples/httpclients-sample/target/" />
     <ignored path="$PROJECT_DIR$/samples/spring-cloud-nacos-sample/target/" />
+    <ignored path="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1733469608">
@@ -61,55 +693,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EchoServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoServer.java">
+      <file leaf-file-name="echarts-demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/views/echarts-demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+            <state relative-caret-position="368">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding>
-                <element signature="e#1552#1836#0" expanded="true" />
-                <element signature="e#1835#1836#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EchoServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoServerHandler.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EchoClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file leaf-file-name="MsgPackApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/msgpack/MsgPackApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="88" lean-forward="true" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -121,6 +721,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -185,6 +787,16 @@
         <option value="$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoServerHandler.java" />
         <option value="$PROJECT_DIR$/netty-sample/netty-console-sample/pom.xml" />
         <option value="$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/msgpack/MsgPackApplication.java" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/HighChartsApplication.java" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/configs/IndexViewConfiguration.java" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/configs/WebConfiguration.java" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/framework.js" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/views/echarts-demo.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -231,8 +843,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="369" />
-    <option name="y" value="196" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -245,6 +857,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,75 +865,15 @@
               <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
               <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="record-all-2.x" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-console-sample" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="msgpack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="record-all-2.x" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -328,14 +881,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547372575377" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../record-all" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mine\github\record-all\record-all-2.x\webLibs-samples\Highcharts-sample\src\main\resources\static\js\echarts" />
+      <recent name="D:\mine\github\record-all\record-all-2.x\webLibs-samples\Highcharts-sample\src\main\resources\static\js\libs" />
       <recent name="D:\mine\github\record-all\record-all-2.x\libs-samples\httpclients-sample\src\main\resources" />
     </key>
   </component>
@@ -351,7 +907,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MsgPackApplication">
+  <component name="RunManager" selected="Application.HighChartsApplication">
     <configuration name="FeignSampleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.krista.httpclients.sample.feign.FeignSampleApplication" />
       <module name="httpclients-sample" />
@@ -359,6 +915,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.krista.httpclients.sample.feign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="HighChartsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.krista.weblibs.highcharts.HighChartsApplication" />
+      <module name="Highcharts-sample" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.krista.weblibs.highcharts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -398,16 +965,6 @@
       <method>
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="GatewaySampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="spring-cloud-gateway-sample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.krista.spring.cloud.gateway.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.krista.spring.cloud.gateway.sample.GatewaySampleApplication" />
     </configuration>
     <configuration name="NacosConfigSampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="spring-cloud-nacos-sample" />
@@ -457,17 +1014,17 @@
     <list>
       <item itemvalue="Spring Boot.SpringWebfluxSampleApplication" />
       <item itemvalue="Application.FeignSampleApplication" />
-      <item itemvalue="Spring Boot.GatewaySampleApplication" />
       <item itemvalue="Spring Boot.NacosConfigSampleApplication" />
       <item itemvalue="Application.MsgPackApplication" />
+      <item itemvalue="Application.HighChartsApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HighChartsApplication" />
         <item itemvalue="Application.MsgPackApplication" />
         <item itemvalue="Spring Boot.NacosConfigSampleApplication" />
         <item itemvalue="Spring Boot.SpringWebfluxSampleApplication" />
         <item itemvalue="Application.FeignSampleApplication" />
-        <item itemvalue="Spring Boot.GatewaySampleApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -484,11 +1041,12 @@
       <workItem from="1547197899939" duration="2342000" />
       <workItem from="1547220946003" duration="15586000" />
       <workItem from="1548148328318" duration="2925000" />
+      <workItem from="1551682794787" duration="7811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45739000" />
+    <option name="totallyTimeSpent" value="53550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,7 +1058,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -522,10 +1080,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29469123" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18634886" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23081024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23347548" />
+      <window_info anchor="bottom" id="Problems" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="12" />
@@ -585,186 +1144,16 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6-sources.jar!/org/apache/http/client/methods/CloseableHttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10-sources.jar!/org/apache/http/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/rt.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6-sources.jar!/org/apache/http/impl/client/HttpClients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6-sources.jar!/org/apache/http/impl/client/HttpClientBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="972" column="75" selection-start-line="972" selection-start-column="75" selection-end-line="972" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6-sources.jar!/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3865">
-          <caret line="164" column="23" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs-samples/httpclients-sample/src/main/java/com/krista/httpclients/sample/httpclient/HttpClientUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs-samples/httpclients-sample/src/main/java/com/krista/httpclients/sample/httpclient/HttpClientSampleApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/io.netty.channel.ChannelInboundHandler">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>io.netty.channel.ChannelInboundHandler</OriginalElement>
-          <nodes>
-            <node x="" y="">io.netty.channel.ChannelInboundHandler</node>
-            <node x="" y="">io.netty.channel.ChannelHandler</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="95.0" y="56.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelOutboundInvoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="207" column="18" selection-start-line="207" selection-start-column="18" selection-end-line="207" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/ReadMe.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/nio/AbstractNioMessageChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/nio/NioServerSocketChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2048">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/DuplexChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/SocketChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/ServerSocketChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/util/CharsetUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/DefaultChannelPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1104">
-          <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="215" column="17" selection-start-line="215" selection-start-column="17" selection-end-line="215" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/nio/AbstractNioMessageChannel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/nio/NioServerSocketChannel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/Channel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/DuplexChannel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/SocketChannel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/socket/ServerSocketChannel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelInitializer.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/util/CharsetUtil.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/DefaultChannelPipeline.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/channel/ChannelPipeline.java" />
     <entry file="file://$PROJECT_DIR$/samples/spring-cloud-gateway-sample/src/main/java/com/krista/spring/cloud/gateway/sample/GatewaySampleApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -779,13 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.0.2.RELEASE/spring-cloud-gateway-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/gateway/route/builder/GatewayFilterSpec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.0.2.RELEASE/spring-cloud-gateway-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/gateway/route/builder/GatewayFilterSpec.java" />
     <entry file="file://$PROJECT_DIR$/samples/spring-cloud-gateway-sample/src/main/java/com/krista/spring/cloud/gateway/sample/configuration/RequestRateConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -807,88 +1190,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/nacos/nacos-api/0.6.2/nacos-api-0.6.2.jar!/com/alibaba/nacos/api/config/ConfigFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/nacos/nacos-api/0.6.2/nacos-api-0.6.2.jar!/com/alibaba/nacos/api/config/ConfigFactory.class" />
     <entry file="file://$PROJECT_DIR$/samples/spring-cloud-nacos-sample/src/main/resources/application.yaml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-context/2.0.2.RELEASE/spring-cloud-context-2.0.2.RELEASE.jar!/org/springframework/cloud/bootstrap/config/PropertySourceBootstrapConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigBootstrapConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#1860#1861#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/client/NacosPropertySourceLocator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="61" column="50" lean-forward="true" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/client/NacosPropertySourceLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/refresh/NacosContextRefresher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/META-INF/spring.factories">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigBootstrapConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-context/2.0.2.RELEASE/spring-cloud-context-2.0.2.RELEASE.jar!/org/springframework/cloud/bootstrap/config/PropertySourceBootstrapConfiguration.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigBootstrapConfiguration.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigProperties.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/org/springframework/cloud/alibaba/nacos/client/NacosPropertySourceLocator.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/client/NacosPropertySourceLocator.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigProperties.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/refresh/NacosContextRefresher.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE.jar!/META-INF/spring.factories" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-alibaba-nacos-config/0.2.1.RELEASE/spring-cloud-alibaba-nacos-config-0.2.1.RELEASE-sources.jar!/org/springframework/cloud/alibaba/nacos/NacosConfigBootstrapConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/samples/spring-cloud-nacos-sample/src/main/java/com/krista/nacos/config/sample/NacosConfigSampleApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,25 +1215,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding>
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2799#2800#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java" />
     <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="897">
           <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
-          <folding>
-            <element signature="e#1552#1836#0" expanded="true" />
-            <element signature="e#1835#1836#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,6 +1230,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/msgpack/msgpack/0.6.12/msgpack-0.6.12.jar!/org/msgpack/template/Templates.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/msgpack/msgpack/0.6.12/msgpack-0.6.12-sources.jar!/org/msgpack/template/Templates.java" />
     <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/echo/EchoClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -935,43 +1239,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/pom.xml">
+    <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/msgpack/MsgPackApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="414">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs-samples/httpclients-sample/src/main/java/com/krista/httpclients/sample/httpclient/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs-samples/httpclients-sample/src/main/java/com/krista/httpclients/sample/httpclient/HttpClientSampleApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/spring-cloud-nacos-sample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/msgpack/msgpack/0.6.12/msgpack-0.6.12.jar!/org/msgpack/template/Templates.class">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
-          <folding>
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3606#3607#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="65" column="11" lean-forward="true" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/msgpack/msgpack/0.6.12/msgpack-0.6.12-sources.jar!/org/msgpack/template/Templates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-          <folding>
-            <element signature="e#3996#3997#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/libs/Highcharts-7.0.3/gfx/stock-icons/ray.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-sample/netty-console-sample/src/main/java/com/krista/netty/sample/msgpack/MsgPackApplication.java">
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/framework.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/configs/WebConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="88" lean-forward="true" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
+        <state relative-caret-position="299">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/java/com/krista/weblibs/highcharts/HighChartsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/js/echarts/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webLibs-samples/Highcharts-sample/src/main/resources/static/views/echarts-demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>

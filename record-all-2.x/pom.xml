@@ -12,6 +12,7 @@
         <module>netty-sample/netty-console-sample</module>
         <module>libs-samples/httpclients-sample</module>
         <module>samples/spring-cloud-nacos-sample</module>
+        <module>webLibs-samples/Highcharts-sample</module>
     </modules>
     <packaging>pom</packaging>
 

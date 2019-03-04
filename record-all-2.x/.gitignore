@@ -4,6 +4,7 @@ target/
 # IDEA #
 .idea/
 *.iml
+/.idea/
 
 # Eclipse #
 .settings/
@@ -13,3 +14,5 @@ target/
 *.log
 
 logs/
+
+
