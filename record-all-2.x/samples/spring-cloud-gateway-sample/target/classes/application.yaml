@@ -20,6 +20,9 @@ spring:
             redis-rate-limiter.replenishRate: 1
             redis-rate-limiter.burstCapacity: 2
             key-resolver: "#{@pathKeyResolver}"
+  redis:
+    host: 127.0.0.1
+    port: 6379
 server:
   port: 7070
 # 启动监控端点
