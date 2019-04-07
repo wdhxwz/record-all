@@ -32,7 +32,7 @@ public class Constants {
 //            "p_medical_history", "p_nutrition_report", "p_nutrition_service", "p_patient"
 //    );
 
-    public static List<String> tables = Arrays.asList("c_banner");
+    public static List<String> tables = Arrays.asList("p_diet_log_review");
 
     /**
      * 程序相关配置
@@ -45,7 +45,7 @@ public class Constants {
     static String servicePackage = "service";
     static String serviceImplPackage = "service.impl";
     static String flag = ".";
-    static String saveDir = "C:\\Users\\Administrator\\Desktop\\test\\" + System.currentTimeMillis();
+    static String saveDir = "C:\\Users\\wdhcxx\\Desktop\\test\\" + System.currentTimeMillis();
     static String author = "krista";
     static String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 

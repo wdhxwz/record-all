@@ -13,6 +13,8 @@
         <module>libs-samples/httpclients-sample</module>
         <module>samples/spring-cloud-nacos-sample</module>
         <module>webLibs-samples/Highcharts-sample</module>
+        <module>libs-samples/mybatis-sample</module>
+        <module>libs-samples/redis-sample</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 引入数据库配置文件 -->
+    <properties resource="config.properties"/>
+
+    <context id="mysql" targetRuntime="MyBatis3Simple"
+             defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <!-- 格式化java代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter" />
+        <!-- 插件 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.krista.extend.mybatis.KristaMapper" />
+        </plugin>
+        <!-- 覆盖生成XML文件 -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <!-- JavaBean 实现 序列化 接口 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <!-- genenat entity时,生成toString -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+        <commentGenerator type="com.krista.extend.mybatis.generator.KristaCommentGenerator"/>
+        <!-- 数据库配置 -->
+        <jdbcConnection driverClass="${jdbc.mysql.driverClass}"
+                        connectionURL="${jdbc.mysql.url}" userId="${jdbc.mysql.user}"
+                        password="${jdbc.mysql.password}">
+        </jdbcConnection>
+        <!-- 实体类生成目录配置 -->
+        <javaModelGenerator targetPackage="${targetModelPackage}"
+                            targetProject="${targetJavaProject}"/>
+        <!-- mapper接口生成目录 -->
+        <sqlMapGenerator targetPackage="${targetXMLPackage}"
+                         targetProject="${targetResourcesProject}"/>
+        <!-- xml文件生成目录 -->
+        <javaClientGenerator targetPackage="${targetMapperPackage}"
+                             targetProject="${targetJavaProject}" type="XMLMAPPER"/>
+        <!-- 配置表 -->
+        <table tableName="sys_user" domainObjectName="SysUser"/>
+        <table tableName="sys_role" domainObjectName="SysRole"/>
+        <table tableName="sys_menu" domainObjectName="SysMenu"/>
+        <table tableName="sys_dict" domainObjectName="SysDict"/>
+        <table tableName="sysConfig" domainObjectName="sysConfig"/>
+        <table tableName="sys_user_role" domainObjectName="SysUserRole"/>
+    </context>
+</generatorConfiguration>

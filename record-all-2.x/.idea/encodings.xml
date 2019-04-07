@@ -2,7 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs-samples" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/libs-samples/httpclients-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs-samples/mybatis-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs-samples/redis-sample" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty-sample/netty-console-sample" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/samples/spring-cloud-gateway-sample" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/samples/spring-cloud-nacos-sample" charset="UTF-8" />

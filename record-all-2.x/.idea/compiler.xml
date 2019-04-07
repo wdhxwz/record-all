@@ -8,11 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Highcharts-sample" />
         <module name="httpclients-sample" />
+        <module name="mybatis-sample" />
         <module name="netty-console-sample" />
+        <module name="redis-sample" />
         <module name="spring-cloud-gateway-sample" />
         <module name="spring-cloud-nacos-sample" />
         <module name="spring-webflux-sample" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="libs-samples" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

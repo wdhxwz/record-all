@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config.properties">
+
+    </properties>
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+    <typeAliases>
+        <package name="com.krista.mybatis.sample.model"></package>
+    </typeAliases>
+    
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+
+        </plugin>
+    </plugins>
+    
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.mysql.driverClass}"/>
+                <property name="url" value="${jdbc.mysql.url}"/>
+                <property name="username" value="${jdbc.mysql.user}"/>
+                <property name="password" value="${jdbc.mysql.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+       <!-- <mapper resource="mappers/SysUserMapper.xml"/>-->
+        <!--
+            以接口的方式注册映射文件，mybatis需要从接口全类名中获得映射文件，
+            所以接口文件和映射文件放在同一包路径下，且文件名必须相同
+        -->
+        <!--<package name="com.krista.mybatis.sample.mapper"></package>-->
+    </mappers>
+</configuration>
