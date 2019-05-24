@@ -15,6 +15,7 @@
         <module>webLibs-samples/Highcharts-sample</module>
         <module>libs-samples/mybatis-sample</module>
         <module>libs-samples/redis-sample</module>
+        <module>dubbo-samples/dubbo-user-center</module>
     </modules>
     <packaging>pom</packaging>
 
