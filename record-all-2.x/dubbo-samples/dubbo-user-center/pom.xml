@@ -34,4 +34,41 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>backup</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <classifier>backup</classifier>
+                            <includes>
+                                <include>com.krista.dubbo.user.center.api</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>host</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <classifier>host</classifier>
+                            <excludes>
+                                <exclude>com.krista.dubbo.user.center.api</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+
+    </build>
 </project>
