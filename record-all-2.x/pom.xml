@@ -17,6 +17,8 @@
         <module>libs-samples/redis-sample</module>
         <module>libs-samples/mongodb-sample</module>
         <module>dubbo-samples/dubbo-user-center</module>
+        <module>dubbo-samples/dubbo-user-center-api</module>
+        <module>dubbo-samples/dubbo-consumer</module>
         <module>java-samples</module>
         <module>libs-samples/kafka-samples</module>
     </modules>

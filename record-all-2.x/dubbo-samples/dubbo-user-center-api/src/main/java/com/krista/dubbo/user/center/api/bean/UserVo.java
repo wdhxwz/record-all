@@ -1,5 +1,7 @@
 package com.krista.dubbo.user.center.api.bean;
 
+import java.io.Serializable;
+
 /**
  * UserVo
  *
@@ -7,7 +9,7 @@ package com.krista.dubbo.user.center.api.bean;
  * @version V1.0
  * @since 2019/5/24 22:56
  */
-public class UserVo {
+public class UserVo implements Serializable {
     private Long id;
     private String name;
     private Integer sex;
