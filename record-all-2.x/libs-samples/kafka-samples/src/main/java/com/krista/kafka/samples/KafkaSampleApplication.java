@@ -15,8 +15,13 @@ public class KafkaSampleApplication {
             new ClassPathXmlApplicationContext("/kafka-producer.xml");
 
     public static void main(String[] args) {
+        System.out.println("begin");
         for (int i = 0; i < 5; i++) {
-            sendMessage("topic1", 0, null, "key", "kafka-test" + i);
+            try {
+                sendMessage("topic1", 0, null, "key", "kafka-test" + i);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
         System.out.println("OK");
     }
