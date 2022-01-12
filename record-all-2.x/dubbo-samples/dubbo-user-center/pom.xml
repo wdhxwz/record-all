@@ -13,7 +13,7 @@
     <artifactId>dubbo-user-center</artifactId>
 
     <properties>
-        <dubbo.version>2.7.0</dubbo.version>
+        <dubbo.version>2.7.15</dubbo.version>
         <apache.curator.version>4.2.0</apache.curator.version>
         <zookeeper.version>3.4.9</zookeeper.version>
         <slf4j.version>1.7.25</slf4j.version>
